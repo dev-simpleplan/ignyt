@@ -39,7 +39,7 @@ body {
 }
 .container-fluid {
   max-width: 1700px;
-  margin: 0;
+  margin: 0 auto; 
   padding: 0 45px;
 }
 h1,
@@ -335,9 +335,110 @@ a:focus {
 }
 /* organic marketing section ends */
 
+/* blur section start */
+.blur_section{
+  /* height: 100vh; */
+  /* border: 1px solid red; */
+}
+.bm_top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 56px;
+}
+.bmt_heading h4{
+  max-width: 30ch;
+}
+.bmt_para p{
+  max-width: 56ch;
+}
+.heading{
+  line-height: 100px;
+  text-align: center;
+  /* color:none; */
+  color:rgba(195, 195, 195, 0.60);
+}
+.bm_btm{
+  margin-top: 250px;
+}
+.bm_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 63px;
+}
+/* blur section ends */
+
+
+
+
+/* team section start */
+.team_section{
+  /* height: 100vh; */
+  width: 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.team_section .team_main,
+.team_section .tm_item{
+  display: flex;
+  position: relative;
+  z-index: 1;  
+  height: 100vh;
+} 
+.team_section .tmi{
+  position: relative;
+  width: 100vw;
+  /* height:100vh; */
+  /* border: 1px solid red; */
+  background: #220E28;
+  border: 2px solid #220E28;
+}
+
+.tmi2_text{
+  background:url('../img/Group\ 17211506.png');
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-size: contain;
+  /* color: #fff; */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 0;
+    margin: auto;
+}
+.tmi2_text p{
+  font-size: 42vw;
+  height: 100%;
+  font-family: var(--pp);
+  font-weight: 900;
+  /* border: 1px solid red; */
+}
+/* team section ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* moto section  */
 .moto_main {
-  padding: 173px 0px;
+  padding: 90px 0px;
   position: relative;
 }
 .mm_text_bottom {
@@ -372,6 +473,7 @@ a:focus {
 .mm_btm {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 70px;
 }
 .mmbtm_left {
   display: flex;
@@ -404,9 +506,27 @@ a:focus {
   margin-right: 14px;
 }
 .mmbtm_text_btm p i{
-  padding-right: 7px;
+  padding-right: 4px;
 }
-
+.mmbtm_right{
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.mmbtmr_inner{
+  height: 0;
+  width: 93%;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mmbtmr_inner img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
 /* moto section ends */
 
 /* result section start */

@@ -1,3 +1,15 @@
+/* 1300 start */
+@media screen and (max-width:1300px) {
+    .mm_text_bottom p{
+        font-size: 23vw;
+    }
+    .mm_text_top {
+        top: 30%;
+        left: 22%;
+    }
+}
+/* 1300 ends */
+
 /* 992 start */
 @media screen and (max-width:992px) {
     h1{
@@ -8,6 +20,7 @@
     }
     h3{
         font-size: 32px;
+        line-height: 42.5px;
     }
     h4{
         font-size: 24px; 
@@ -24,6 +37,27 @@
     /* header start */
     
     /* header ends */
+
+
+
+    .mmbtm_heading {
+        margin-top: 16px;
+    }
+    .mmbtm_text_btm {
+        margin-top: 16px;
+    }
+    .mm_btm{
+        padding-bottom: 50px;
+    }
+
+    .mm_text_top p{
+        max-width: 42ch;
+    }
+ .moto_main {
+    padding:40px 0px ;
+ }
+
+
     /* footer start */
     .main_footer .container-fluid {
         padding: 0px 45px;
@@ -77,6 +111,7 @@
     }
     h3{
         font-size: 24px;
+        line-height: 36.5px;
     }
     h4{
         font-size: 18px; 
@@ -90,8 +125,43 @@
     p{
         font-size: 12px;
     }
+    
+    .mm_btm{
+        padding-bottom: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mmbtm_left{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mmbtm_heading h3 ,.mmbtm_text_btm p{
+        max-width: 100%;
+    }
+    .mmbtm_right{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .moto_main {
+        padding: 24px 0px;
+    }
+
     .main_footer .container-fluid {
         padding: 0px 30px;
+    }
+    .mmbtm_right {
+        width: 100%;
+        display: flex;
+        flex-direction: unset;
+        justify-content: center;
+    }
+    .mm_text_top {
+        top: 22%;
+    }
+    .mm_text_top p {
+        max-width: 38ch;
     }
     .footer_top {
         padding-top: 30px;
@@ -119,8 +189,36 @@
 }
 /* 767 ends */
 
+/* 700 start */
+
+@media screen and (max-width:700px) {
+    .mm_text_bottom p{
+        font-size: 22vw;
+    }
+}
+
+/* 700 ends */
 /* 600 start */
 @media screen and (max-width:600px) {
+    .container-fluid {
+        padding: 0 30px;
+    }
+    .mmbtm_left {
+        width: 100%;
+    }
+    .mmbtmr_inner {
+        width: 100%;
+        padding-top: 107%;
+    }
+    .mmbtm_heading {
+        margin-top: 12px;
+    }
+    .mmbtm_text_btm {
+        margin-top: 8px;
+    }
+    .mm_btm {
+        padding-bottom: 30px;
+    }
     .custom_btn {
         padding: 7px 35px;
     }
@@ -129,6 +227,10 @@
 
 /* 550 start */
 @media screen and (max-width:550px) {
+    .mm_text_top{
+        left: 10%;
+        text-align: center;
+    }
     .footer_top {
         padding-top: 15px;
     }
@@ -154,6 +256,12 @@
 
 /* 400 start */
 @media screen and (max-width:400px) {
-    
+    .mm_text_top {
+        left: 0%;
+    }
+    h3 {
+        line-height: 30.5px;
+        font-size: 22px;
+    }
 }
 /* 400 ends */
