@@ -489,7 +489,7 @@
 
     <!-- Include Splide JS -->
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
 
@@ -501,15 +501,15 @@ const headingChars = headingSplitText.chars;
 
 gsap.defaults({duration: 0.1});
 //  let t1 =  gsap.timeline()
-         gsap.fromTo(headingChars, {
-	       filter: "blur(0.10)",},{  opacity: 1,
-        color:"#35183D",
-        stagger: {
-          from: "left",
-          each: .1
-        },
-  scrollTrigger:".heading",},"<")
-  gsap.fromTo(".bm_btn",{y:"100%"},{y:"0%",duraion:.5,scrollTrigger:".bm_btn"});
+  //        gsap.fromTo(headingChars, {
+	//        filter: "blur(0.10)",},{  opacity: 1,
+  //       color:"#35183D",
+  //       stagger: {
+  //         from: "left",
+  //         each: .1
+  //       },
+  // scrollTrigger:".heading",},"<")
+  // gsap.fromTo(".bm_btn",{y:"100%"},{y:"0%",duraion:.5,scrollTrigger:".bm_btn"});
 
 
   const horizontalSections = gsap.utils.toArray("section.team_section");
