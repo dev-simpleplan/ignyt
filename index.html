@@ -177,23 +177,44 @@
      <!-- team section start -->
      <section class="team_section">
         <div class="team_main">
-          <div class="tm_item to-right">
-            <div class="tmi tmi1">
-  
-            </div>
-            <div class="tmi tmi2">
               <div class="tmi2_text">
                <p>ignyt</p> 
-              </div> 
-            </div>
-          </div>
+              </div>
+          <div class="tmi2_box to-btm">
+             <div class="tmi2b_inner">
+              <div class="tmi2bi_para">
+                <p>THE ELITE SQUAD OF PROFICIENT SPECIALISTS</p>
+              </div>
+              <div class="tmi2bi_heading">
+                <h3>unparalleled team</h3>
+              </div>
+              <div class="tmi2bi_para2">
+                <p>With Ignyt, you not only get exceptional marketing services but also a team of professionals that go beyond every single time.</p>
+              </div>
+              <div class="tmi2bi_btn">
+                <button class="custom_btn">get started with us</button>
+              </div>
+             </div>
+          </div> 
         </div>
      </section>
      <!-- team section ends -->
 
 
+    <!-- project section start -->
+    <section class="project_section">
+      <div class="container-fluid">
+        <div class="ps_main">
+          <div class="psm_top">
 
+          </div>
+          <div class="psm_btm">
 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- project section ends -->
 
 
 
@@ -248,7 +269,7 @@
       <!-- our moto section ends -->
 
       <!-- results section start -->
-      <!-- <section class="result_section">
+      <section class="result_section">
         <div class="container-fluid">
           <div class="result_main">
             <div class="rm_top">
@@ -291,7 +312,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- ressult section ends -->
     </div>
     <!-- body wrapper ends -->
@@ -336,7 +357,7 @@
                 </ul>
               </div>
             </div>
-            <div class="ftm_item">
+            <div class="ftm_item ftm_item4">
               <div class="ftm_heading">
                 <h6>Stay up to date with our newsletter</h6>
               </div>
@@ -380,7 +401,7 @@
                 </ul>
               </div>
             </div>
-            <div class="ftm_item">
+            <div class="ftm_item ">
               <div class="ftm_heading"><h6>advertising</h6></div>
               <div class="ftm_list">
                 <ul>
@@ -394,7 +415,7 @@
                 </ul>
               </div>
             </div>
-            <div class="ftm_item">
+            <div class="ftm_item ftm_item7">
               <div class="ftm_heading"><h6>Get in touch</h6></div>
               <div class="ftm_list">
                 <div class="ftml_email">
@@ -491,57 +512,46 @@
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
     <script>
 
  
 gsap.registerPlugin(ScrollTrigger)
+// const headingSplitText = new SplitText(heading, {type:"chars"});
 const heading = document.querySelector(".heading");
-const headingSplitText = new SplitText(heading, {type:"chars"});
-const headingChars = headingSplitText.chars;
+const results = Splitting({ target: heading, by: 'chars' });
+const headingChars = results[0].chars;
+console.log(headingChars);
 
-gsap.defaults({duration: 0.1});
+gsap.defaults({duration: 0.01});
 //  let t1 =  gsap.timeline()
-  //        gsap.fromTo(headingChars, {
-	//        filter: "blur(0.10)",},{  opacity: 1,
-  //       color:"#35183D",
-  //       stagger: {
-  //         from: "left",
-  //         each: .1
-  //       },
-  // scrollTrigger:".heading",},"<")
+         gsap.fromTo(headingChars, {
+	       filter: "blur(0.10)",},{  opacity: 1,
+        color:"#35183D",
+        stagger: {
+          from: "left",
+          each: .1
+        },
+  scrollTrigger:".heading",},"<")
   // gsap.fromTo(".bm_btn",{y:"100%"},{y:"0%",duraion:.5,scrollTrigger:".bm_btn"});
+    
+       gsap.set(".team_section .tmi2_text",{xPercent:80});
+       gsap.set(".tmi2_box",{yPercent:100});
 
-
-  const horizontalSections = gsap.utils.toArray("section.team_section");
-      horizontalSections.forEach(function (sec, i) {
-        var thisPinWrap = sec.querySelector(".team_main");
-        var thisAnimWrap = thisPinWrap.querySelector(".tm_item");
-
-        var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
-
-        gsap.fromTo(
-          thisAnimWrap,
-          {
-            x: () =>
-              thisAnimWrap.classList.contains("to-right") ? 0 : getToValue(),
-          },
-          {
-            x: () =>
-              thisAnimWrap.classList.contains("to-right") ? getToValue() : 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sec,
-              start: "top top",
-              end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
-              pin: thisPinWrap,
-              invalidateOnRefresh: true,
-              //anticipatePin: 1,
-              scrub: true,
-              //markers: true,
-            },
-          }
-        );
-      });
+       let tl = gsap.timeline({
+        scrollTrigger:{
+          trigger:".team_section",
+          start:"top top",
+          end:"400% bottom",
+          pin:true,
+          markers:false,
+          scrub:1
+        }
+       })
+       tl.to(".team_section .tmi2_text",{xPercent:0},0)
+       .to(".tmi2_box",{yPercent:0},"after");
+      
+      var s = Splitting();
     </script>
   </body>
 </html>
