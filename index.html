@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ignyt || Home</title>
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Poppins:wght@800&family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
@@ -23,6 +19,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.20/dist/css/splide.min.css"
     />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <!-- header start -->
@@ -147,6 +146,62 @@
       </section>
       <!-- organic marketing section ends -->
 
+      <!-- blur section start -->
+      <section class="blur_section">
+        <div class="container">
+          <div class="blur_main">
+            <div class="bm_top">
+                <div class="bmt_heading">
+                  <h4>All-Encompassing Digital Marketing Strategies For Success</h4>
+                </div>
+                <div class="bmt_para">
+                  <p>There’s more than one way to start a fire. A match, lighter, blowtorch- the list goes on!. Similarly, there’s more than one strategy to ignite your online presence. For the best blaze, we use all the tools in our kit!</p>
+                </div>
+            </div>
+            <div class="bm_btm">
+              <h2 class="heading">
+             search engine optimization. websites.CONTENT CREATION.VIDEO PRODUCTION.SOCIAL MEDIA MARKETING.ADVERTISING.
+              </h2>
+            </div>
+            <div class="bm_btn">
+              <button class="custom_btn">our services</button>
+            </div>
+          </div>
+
+        </div>
+
+
+      </section>
+      <!-- blur section ends -->
+
+     <!-- team section start -->
+     <section class="team_section">
+        <div class="team_main">
+          <div class="tm_item to-right">
+            <div class="tmi tmi1">
+  
+            </div>
+            <div class="tmi tmi2">
+              <div class="tmi2_text">
+               <p>ignyt</p> 
+              </div> 
+            </div>
+          </div>
+        </div>
+     </section>
+     <!-- team section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- our motto section start -->
       <section class="our_moto_section">
         <div class="container-fluid">
@@ -193,7 +248,7 @@
       <!-- our moto section ends -->
 
       <!-- results section start -->
-      <section class="result_section">
+      <!-- <section class="result_section">
         <div class="container-fluid">
           <div class="result_main">
             <div class="rm_top">
@@ -236,7 +291,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- ressult section ends -->
     </div>
     <!-- body wrapper ends -->
@@ -433,18 +488,60 @@
     <!-- footer ends -->
 
     <!-- Include Splide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.20/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-      const splide = new Splide(".sp", {
-        type: "loop",
-        drag: "free",
-        focus: "center",
-        perPage: 8,
-        autoScroll: {
-          speed: 1,
+
+ 
+gsap.registerPlugin(ScrollTrigger)
+const heading = document.querySelector(".heading");
+const headingSplitText = new SplitText(heading, {type:"chars"});
+const headingChars = headingSplitText.chars;
+
+gsap.defaults({duration: 0.1});
+//  let t1 =  gsap.timeline()
+         gsap.fromTo(headingChars, {
+	       filter: "blur(0.10)",},{  opacity: 1,
+        color:"#35183D",
+        stagger: {
+          from: "left",
+          each: .1
         },
+  scrollTrigger:".heading",},"<")
+  gsap.fromTo(".bm_btn",{y:"100%"},{y:"0%",duraion:.5,scrollTrigger:".bm_btn"});
+
+
+  const horizontalSections = gsap.utils.toArray("section.team_section");
+      horizontalSections.forEach(function (sec, i) {
+        var thisPinWrap = sec.querySelector(".team_main");
+        var thisAnimWrap = thisPinWrap.querySelector(".tm_item");
+
+        var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
+
+        gsap.fromTo(
+          thisAnimWrap,
+          {
+            x: () =>
+              thisAnimWrap.classList.contains("to-right") ? 0 : getToValue(),
+          },
+          {
+            x: () =>
+              thisAnimWrap.classList.contains("to-right") ? getToValue() : 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: sec,
+              start: "top top",
+              end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
+              pin: thisPinWrap,
+              invalidateOnRefresh: true,
+              //anticipatePin: 1,
+              scrub: true,
+              //markers: true,
+            },
+          }
+        );
       });
-      splide.mount();
     </script>
   </body>
 </html>
