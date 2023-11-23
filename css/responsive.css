@@ -76,6 +76,13 @@
     .input_field input::placeholder{
         font-size: 12px;
     }
+    .ftm_item4{
+        order: 1;
+    }
+    .ftm_item7{
+        order: 2;
+    }
+    
     .ftm_btn {
         margin-top: 18px;
     }
