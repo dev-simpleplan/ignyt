@@ -1,0 +1,76 @@
+/* animation start */
+.trans {
+    overflow: hidden;
+  }
+  .trans-first {
+    padding-bottom: 5px;
+    transition: 1s ease all;
+    transition-delay: 0.2s;
+  }
+  .trans-second {
+    transition: 1s ease all;
+    transition-delay: 0.5s;
+  }
+  .trans-third {
+    transition: 1s ease all;
+    transition-delay: 0.8s;
+  }
+  .trans-forth {
+    transition: 1s ease all;
+    transition-delay: 1.1s;
+  }
+  .trans-five {
+    transition: 1s ease all;
+    transition-delay: 1.5s;
+  }
+.trans p,
+.trans h1,
+.trans h2,
+.trans h3,
+.trans h4,
+.trans h5,
+.trans h6,
+.trans .custom_btn  {
+  transform: translateY(100%);
+}
+.active .trans p,
+.active .trans h1,
+.active .trans h2,
+.active .trans h3,
+.active .trans h4,
+.active .trans h5,
+.active .trans h6,
+.active .trans .custom_btn  {
+  transform: translateY(0);
+}
+.active .choose-tag.trans div {
+    transform: translateY(100%);
+  }
+  .element.in-viewport .trans p,
+  .element.in-viewport .trans h1,
+  .element.in-viewport .trans h2,
+  .element.in-viewport .trans h3,
+  .element.in-viewport .trans h4,
+  .element.in-viewport .trans h5,
+  .element.in-viewport .trans h6,
+  .element.in-viewport .trans .custom_btn  {
+    transform: translateY(0);
+  }
+  .was-in-viewport .trans p,
+  .was-in-viewport .trans h1,
+  .was-in-viewport .trans h2,
+  .was-in-viewport .trans h3,
+  .was-in-viewport .trans h4,
+  .was-in-viewport .trans h5,
+  .was-in-viewport .trans h6,
+  .was-in-viewport .trans .custom_btn  {
+    transform: translateY(0);
+  }
+  .was-in-viewport .our-centre-box {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+  .was-in-viewport .choose-feat-img {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
