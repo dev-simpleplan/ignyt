@@ -15,18 +15,40 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.20/dist/css/splide.min.css"
-    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/kartik.css">
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
+  <body class="stay">
+    
+    
+    <!-- Loader Start CSS  -->
+    <div class="loader">
+      <div class="loader-img">
+          <img src="img/header-logo.svg" alt="Loader Image ">
+      </div>
+      <div class="loader-flex-box">
+          <div class="loading">
+              <h6>loading
+                  <span class="dot-one"> .</span>
+                  <span class="dot-two"> .</span>
+                  <span class="dot-three"> .</span>
+              </h6>
+          </div>
+      </div>
+  </div>
+
+   <!-- Loader Start End    -->
+    
+
+
     <!-- header start -->
+
 
     <header class="main_header">
       <div class="container-fluid">
@@ -43,8 +65,10 @@
             <a href=""><img src="img/header-logo.svg" alt="" /></a>
           </div>
           <div class="header_btn">
-            <a href="">
-              <button class="custom_btn">Enquire Now</button>
+            <a href="" class="custom_btn">
+              <span>Enquire Now</span>
+              <div class="transition"></div>
+              <!-- <button class="custom_btn"></button> -->
             </a>
           </div>
         </div>
@@ -52,6 +76,25 @@
     </header>
 
     <!-- header ends -->
+
+    <!-- cursor start -->
+    <!-- <div id="cursor" class="cursor"> -->
+      <!-- <div class="ring"> -->
+        <div><!--Border--></div>
+      </div>
+      <!-- <div class="ring"> -->
+        <div><!--Pointer--></div>		
+      </div>
+    <!-- </div> -->
+    <!-- cursor ends -->
+
+
+
+
+
+
+
+
 
     <!-- body wrapper start -->
 
@@ -92,13 +135,27 @@
                 <img src="img/bi3.png" alt="" />
               </div>
             </div>
-            <div class=" banner_last gsap-video">
-                <div class="banner-item br_item2 pt_img4 ">
+            <!-- <div class=" banner_last gsap-video">
+              <div class="banner-item br_item2 pt_img4 ">
                     <img src="img/bi4.png" alt="" />
-                 </div>
+                  </div>
+                </div> -->
+                <div class="brs_img" id="brs_img">
+                <img src="img/bi4 copy.png" alt="">
+              </div>
+              </div>
             </div>
-          </div>
-        </div>
+            <div class="br_second">
+              <div class="brs_img" id="brs_img">
+                <img src="img/bi4 copy.png" alt="">
+              </div>
+              <div class="vid_con">
+                  <video loop="" playsinline="" preload="metadata" autoplay muted>
+                     <source type="video/mp4" 
+                     src="img/b7478d43.mp4">
+                     </video>
+              </div>
+            </div>
       </section>
 
       <!-- banner ends -->
@@ -135,23 +192,46 @@
               </p>
             </div>
              <div class="omb_btn trans">
-              <button class="custom_btn trans-forth ">get started</button>
+              <a href="" class="custom_btn trans-forth">
+                <span>get started</span>
+                <div class="transition"></div>
+                <!-- <button class="custom_btn"></button> -->
+              </a>
+              <!-- <button class="custom_btn trans-forth ">get started</button> -->
              </div>
           </div>
         </div>
-        <!-- <div class="sp">
-          <img src="img/image 69.svg" alt="" />
-          <img src="img/image 70.svg" alt="" />
-          <img src="img/image 71.svg" alt="" />
-          <img src="img/image 72.svg" alt="" />
-          <img src="img/image 73.svg" alt="" />
-          <img src="img/image 74.svg" alt="" />
-          <img src="img/image 75.svg" alt="" />
-          <img src="img/image 69.svg" alt="" />
-        </div> -->
       </section>
       <!-- organic marketing section ends -->
    
+      <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list slider_main2">
+            <li class="splide__slide"><img src="img/image 69.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 70.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 71.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 72.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 73.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 74.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 75.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 69.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 69.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 70.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 71.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 72.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 73.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 74.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 75.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 69.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 70.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 71.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 72.svg" alt="" /></li>
+            <li class="splide__slide"><img src="img/image 73.svg" alt="" /></li>
+            
+          </ul>
+        </div>
+      </section>
+
 
     <!-- mark section start -->
      <section class="mark_section">
@@ -209,6 +289,9 @@
        <div class="container-fluid">
           <div class="c_main">
             <div class="c_inner">
+              <div class="line1">
+               
+              </div>
                 <div class="ci_left">
                   <div class="cil_main">
                     <div class="cil_img">
@@ -319,11 +402,17 @@
             </div>
             <div class="bm_btm">
               <h2 class="heading">
-             search engine optimization. websites.CONTENT CREATION.VIDEO PRODUCTION.SOCIAL MEDIA MARKETING.ADVERTISING.
+            <a href="">search engine optimization.</a><a href="">  websites.CONTENT CREATION.</a><a href="">VIDEO PRODUCTION.</a>
+            <a href="">SOCIAL MEDIA MARKETING.</a><a href="">ADVERTISING.</a>
               </h2>
             </div>
             <div class="bm_btn">
-              <button class="custom_btn">our services</button>
+              <a href="" class="custom_btn">
+                <span>our services</span>
+                <div class="transition"></div>
+                <!-- <button class="custom_btn"></button> -->
+              </a>
+              <!-- <button class="custom_btn">our services</button> -->
             </div>
           </div>
 
@@ -351,7 +440,12 @@
                 <p>With Ignyt, you not only get exceptional marketing services but also a team of professionals that go beyond every single time.</p>
               </div>
               <div class="tmi2bi_btn">
-                <button class="custom_btn">get started with us</button>
+                <a href="" class="custom_btn">
+                  <span>get started with us</span>
+                  <div class="transition"></div>
+                  <!-- <button class="custom_btn"></button> -->
+                </a>
+                <!-- <button class="custom_btn">get started with us</button> -->
               </div>
              </div>
           </div> 
@@ -361,23 +455,195 @@
 
 
     <!-- project section start -->
-    <!-- <section class="project_section">
+    <section class="project_section">
       <div class="container-fluid">
         <div class="ps_main">
           <div class="psm_top">
-
+            <div class="psmt_para">
+              <p>our projects</p>
+            </div>
+            <div class="owl-carousel owl-theme">
+              <div class="oc_main">
+                <div class="ocm_item ocmi_1">
+                  <div class="oci_left">
+                      <img src="img/image 43.png" alt="">
+                  </div>
+                  <div class="oci_right trans">
+                      <div class="ocir_top trans-first">
+                            <a href="">WEBSITE DESIGN</a>
+                      </div>
+                      <div class="ocir_btm">
+                        <div class="trans">
+                          <h3 class="trans-first">Anotherkind </h3>
+                        </div>
+                        <div class="trans">
+                          <h6 class="trans-second">SerWorking with one of the Australia’s leading IT solutions company</h6>
+                        </div>
+                        <div class="trans">
+                          <p class="trans-third">Zenith Technologies were looking to modernize their online presence to attract international clients to join them.</p>
+                          <a href="" class="custom_btn">
+                            <span>view project</span>
+                            <div class="transition"></div>
+                            <!-- <button class="custom_btn"></button> -->
+                          </a>
+                          <!-- <button class="custom_btn">View project</button> -->
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="oc_main">
+                <div class="ocm_item">
+                  <div class="oci_left">
+                      <img src="img/image 43 (1).png" alt="">
+                  </div>
+                  <div class="oci_right">
+                      <div class="ocir_top trans">
+                            <a href="" class="trans-first">WEBSITE DESIGN</a>
+                      </div>
+                      <div class="ocir_btm">
+                        <div class="trans">
+                          <h3 class="trans-first">Anotherkind </h3>
+                        </div>
+                        <div class="trans">
+                          <h6 class="trans-second">SerWorking with one of the Australia’s leading IT solutions company</h6>
+                        </div>
+                        <div class="trans">
+                          <p class="trans-third">Zenith Technologies were looking to modernize their online presence to attract international clients to join them.</p>
+                          <a href="" class="custom_btn">
+                            <span>view project</span>
+                            <div class="transition"></div>
+                            <!-- <button class="custom_btn"></button> -->
+                          </a>
+                          <!-- <button class="custom_btn">View project</button> -->
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="oc_main">
+                <div class="ocm_item ocmi_2">
+                  <div class="oci_left">
+                      <img src="img/image 43.png" alt="">
+                  </div>
+                  <div class="oci_right">
+                      <div class="ocir_top trans">
+                            <a href="" class="trans-first">WEBSITE DESIGN</a>
+                      </div>
+                      <div class="ocir_btm">
+                        <div class="trans">
+                          <h3 class="trans-first">Anotherkind </h3>
+                        </div>
+                        <div class="trans">
+                          <h6 class="trans-second">SerWorking with one of the Australia’s leading IT solutions company</h6>
+                        </div>
+                        <div class="trans">
+                          <p class="trans-second">Zenith Technologies were looking to modernize their online presence to attract international clients to join them.</p>
+                          <a href="" class="custom_btn">
+                            <span>view project</span>
+                            <div class="transition"></div>
+                            <!-- <button class="custom_btn"></button> -->
+                          </a>
+                          <!-- <button class="custom_btn">View project</button> -->
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="oc_main">
+                <div class="ocm_item">
+                  <div class="oci_left">
+                      <img src="img/image 43 (1).png" alt="">
+                  </div>
+                  <div class="oci_right">
+                      <div class="ocir_top trans">
+                            <a href="" class="trans-first">WEBSITE DESIGN</a>
+                      </div>
+                      <div class="ocir_btm">
+                        <div class="trans">
+                          <h3 class="trans-first">Anotherkind </h3>
+                        </div>
+                        <div class="trans">
+                          <h6 class="trans-second">SerWorking with one of the Australia’s leading IT solutions company</h6>
+                        </div>
+                        <div class="trans">
+                          <p class="trans-second">Zenith Technologies were looking to modernize their online presence to attract international clients to join them.</p>
+                          <a href="" class="custom_btn">
+                            <span>view project</span>
+                            <div class="transition"></div>
+                            <!-- <button class="custom_btn"></button> -->
+                          </a>
+                          <!-- <button class="custom_btn">View project</button> -->
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
           </div>
-          <div class="psm_btm">
-
+          </div>
+          <div class="psm_blog">
+              <div class="psmbtm_heading">
+                    <div class="psmbtm_left">
+                      <h3>featured blogs</h3>
+                    </div>
+                    <div class="psmbtm_right">
+                      <a href="" class="custom_btn">
+                        <span>view more blogs</span>
+                        <div class="transition"></div>
+                        <!-- <button class="custom_btn"></button> -->
+                      </a>
+                      <!-- <button class="custom_btn">view more blogs</button> -->
+                    </div>
+              </div>
+              <div class="psmbtm_card  element i-v">
+                <a href="">
+                  <div class="psmbtm_item">
+                     <div class="psmbtmi_top trans">
+                         <p class="para1 trans-first">sign you’ve been looking for</p>
+                         <p class="para2 trans-second">Lorem ipsum dolor sit amet consectetur.
+                          Facilisis donec nunc aliquet non et in. Leo hac 
+                          diam volutpat vitae nulla elementum duis purus eget.
+                           Tempor a sit massa ac condimentum enim neque et.</p>  
+                     </div>
+                     <div class="psmbtmi_btm">
+                       <img src="img/image 159.png" alt="">
+                     </div>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="psmbtm_item ">
+                   <div class="psmbtmi_top trans">
+                    <p class="para1 trans-first">journey</p>
+                    <p class="para2 trans-second">Lorem ipsum dolor sit amet consectetur.
+                      Facilisis donec nunc aliquet non et in. Leo hac 
+                      diam volutpat vitae nulla elementum duis purus eget.
+                       Tempor a sit massa ac condimentum enim neque et.</p>
+                   </div>
+                   <div class="psmbtmi_btm">
+                     <img src="img/image 160.png" alt="">
+                   </div>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="psmbtm_item">
+                   <div class="psmbtmi_top trans">
+                    <p class="para1 trans-first">courage</p>
+                    <p class="para2 trans-second">Lorem ipsum dolor sit amet consectetur.
+                       Facilisis donec nunc aliquet non et in. Leo hac 
+                       diam volutpat vitae nulla elementum duis purus eget.
+                        Tempor a sit massa ac condimentum enim neque et.</p>
+                   </div>
+                   <div class="psmbtmi_btm">
+                     <img src="img/image 166.png" alt="">
+                   </div>
+                  </div>
+                </a>
+              </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- project section ends -->
-
-
-
-
 
 
 
@@ -467,15 +733,29 @@
               </div>
             </div>
             <div class="rm_bottom">
-              <button class="custom_btn">get started</button>
+              <a href="" class="custom_btn">
+                <span>get started</span>
+                <div class="transition"></div>
+                <!-- <button class="custom_btn"></button> -->
+              </a>
+              <!-- <button class="custom_btn">get started</button> -->
             </div>
           </div>
         </div>
       </section>
       <!-- ressult section ends -->
+ 
+ 
+      <!-- <section>
+        <video autoplay="" loop=""
+        playsinline="" preload="metadata" autoplay>
+           <source type="video/mp4" 
+           src="https://player.vimeo.com/progressive_redirect/playback/813507019/rendition/1080p/file.mp4?loc=external&amp;signature=f2951d2067c925a6338230ca2e9d6a73abc23ea8942b134543404213ad52ab4f#t=0.001">
+       
+           </video>
+      </section> -->
     </div>
     <!-- body wrapper ends -->
-    <section></section>
 
     <!-- footer start -->
 
@@ -532,7 +812,12 @@
                   </p>
                 </div>
                 <div class="ftm_btn">
-                  <button class="custom_btn">subcribe</button>
+                  <a href="" class="custom_btn">
+                    <span>subscribe</span>
+                    <div class="transition"></div>
+                    <!-- <button class="custom_btn"></button> -->
+                  </a>
+                  <!-- <button class="custom_btn">subcribe</button> -->
                 </div>
               </div>
             </div>
@@ -670,17 +955,69 @@
     <!-- Include Splide JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
     <script src="./js/jquery.in-viewport-class.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+    <!-- <script src="./js/splide-extension-auto-scroll.min.js"></script> -->
+    <script src="./js/infiniteslidev2.js"></script>
     <script src="./js/animation.js"></script>
-    <script>
+  
+  <script>
+   
 
- 
- 
-      
-     
+  //  let c_btns = document.querySelectorAll(".custom_btn");
+  //  let cursor = document.getElementById("cursor");
+
+    // c_btns.forEach(function(c_btn) {
+    //   c_btn.addEventListener('mouseenter', function() {
+    //     cursor.style.width = '2rem';
+    //     cursor.style.height = '2rem';
+    //     cursor.style.opacity = ".5"
+    //     // Add other styling or actions as needed
+    //   });
+    //   c_btn.addEventListener('mouseleave', function() {
+    //     cursor.style.width = '1rem';
+    //     cursor.style.height = '1rem';
+    //     cursor.style.opacity = "1"
+    //     // Add other styling or actions as needed
+    //   });
+    // });
+
+
+
     </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+gsap.set(".bl_top", { opacity: 0, position: "relative", yPercent: "100" });
+gsap.set(".bl_bottom", { opacity: 0, position: "relative", yPercent: "100" });
+gsap.set(".br_item1", { opacity: 0, position: "relative", yPercent: "100" });
+gsap.set(".br_second .brs_img", {opacity: 0,height: "29%",width: "12%",left: "85%",top: "70%",});
+gsap.set(".vid_con video", {opacity:0,height: "12%",width: "10%",left: "87%",top: "41%",});
+
+let t6 = gsap.timeline();
+t6.to(".bl_top", { opacity: 1, yPercent: "0" }, 2.8)
+  .to(".bl_bottom", { opacity: 1, yPercent: "0" })
+  .to(".br_item1", { opacity: 1, yPercent: "0" }, "<")
+  .to(".br_second .brs_img", {opacity: 1,height: "29%",width: "12%",left: "85%",top: "34%"},"<")
+  .to(".vid_con video", {opacity:1,height: "12%",width: "10%",left: "87%",top: "41%"}) -->
+  <!-- gsap.set(".bl_top",{opacity:0,position:"relative",yPercent:"100"})
+  gsap.set(".bl_bottom",{opacity:0,position:"relative",yPercent:"100"})
+  gsap.set(".br_item1",{opacity:0,position:"relative",yPercent:"100"})
+  let t6 = gsap.timeline()
+        t6.to(".bl_top",{opacity:1,yPercent:"0"},2.8)
+        .to(".bl_bottom",{opacity:1,yPercent:"0"})
+        .to(".br_item1",{opacity:1,yPercent:"0"},"<") -->

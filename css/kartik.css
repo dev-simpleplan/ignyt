@@ -10,7 +10,7 @@
     font-family: "PP Formula Compressed";
 }
 .banner_main{
-    width: calc(100% - 15%);
+    width: calc(100% - 12%);
 }
 .pt_img{
     width: 50%;
@@ -19,15 +19,10 @@
 }
 .banner_left {
     width: 85%;
-    /* border: 1px solid red; */
 }
 .banner_right {
     width: 15%;
-    /* border: 1px solid red; */
 }
-/* .banner-last{
-    width: 15%;
-} */
 .bl_top{
     justify-content: start;
     gap: 20px;
