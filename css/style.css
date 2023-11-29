@@ -4,7 +4,7 @@ General CSS
 ========================================== 
 */
 html {
-  cursor: pointer;
+  cursor:none;
   scroll-behavior: smooth;
 }
 :root {
@@ -349,6 +349,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .banner .container-fluid {
   /* max-width:100%;

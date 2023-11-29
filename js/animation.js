@@ -24,9 +24,24 @@ let mm = gsap.matchMedia();
 mm.add("(min-width: 992px)", () => {
   // if (window.innerWidth >4000) {
   gsap.registerPlugin(ScrollTrigger);
+
+
+  // header gsap
   
   // gsap for banner
   
+   let tf = gsap.timeline({defaults:{opacity:0,scale:0,transformOrigin:"50% 50%",yPercent:100}})
+            .from(".header_inner > div",{stagger:.3},2.79)
+           .from(".bl_top > div",{stagger:.3},"<")
+           .from(".br_item1 .image",{},"-=.1")
+           .from(".brs_img .brs_itm",{},"<")
+           .from(".vid_con video",{opacity:0},"<.3")
+           .from(".bl_bottom > div",{stagger:.1},"<")
+           
+
+
+
+
   gsap.set(".br_second .brs_img", {
     opacity: 1,
     height: "29%",
@@ -84,8 +99,8 @@ mm.add("(min-width: 992px)", () => {
       },
       "<"
     )
-    .to(".banner_left div", { opacity: 0 }, "<")
-    .to(".brs_img img", { opacity: 0 }, "<");
+    // .to(".banner_left div", { opacity: 0 }, "<")
+    // .to(".brs_img img", { opacity: 0 }, "<");
   
   // gsap.registerPlugin(ScrollTrigger)
   // const headingSplitText = new SplitText(heading, {type:"chars"});
