@@ -15,7 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
@@ -186,6 +186,13 @@
       </div>
     </header>
 
+    <div class="cursor">
+      <div class="cursor-wrap"></div>
+      <div class="cursor-wrap-svg">
+        <img src="img/svgCursor.png" alt="">
+      </div>
+    </div>
+
     <!-- header ends -->
 
 
@@ -203,62 +210,32 @@
 
     <div class="body_wrapper">
       <!-- banner start -->
-      <section class="banner height_100vh home-video-banner">
-        <div class="container-fluid container-100">
-          <div class="banner_main">
-            <div class="banner_left">
-              <div class="bl_top">
-                <div class="bl_text">
-                  <span>Your</span>
-                </div>
-                    <div class="bl_img pt_img1 pt_img">
-                        <img src="img/bi1.svg" alt="" />
-                      </div>
-                      <div class="bl_text">
-                        <span>Digital</span>
-                      </div>
-                      <div class="bl_img pt_img2 pt_img">
-                        <img src="img/bi2.svg" alt="" />
-                      </div>
+      <section class="home-banner">
+       <div class="home-container">
+        <div class="home-banner-wrap">
+          <div class="home-banner-wrap-left">
+            <div class="home-banner-text">
+              <span>Your</span>
+              <div class="home-banner-img">
+                <img src="img/banner1.png" alt="">
               </div>
-              <div class="bl_bottom">
-                <div class="bl_text">
-                  <span>Success</span>
-                </div>
-                <div class="bl_text">
-                  <span>Starts</span>
-                </div>
-                <div class="bl_text">
-                  <span>here</span>
-                </div>
+              <span>Digital</span>
+              <div class="home-banner-img">
+                <img src="img/banner2.png" alt="">
               </div>
+              <span>Success Starts Here</span>
             </div>
-            <div class="banner_right">
-              <div class=" banner-item br_item1 pt_img3">
-                <img src="img/bi3.png" alt="" class="image"/>
-              </div>
+          </div>
+          <div class="home-banner-wrap-right">
+            <div class="home-banner-img">
+              <img src="img/bi3.png" alt="">
             </div>
-            <!-- <div class=" banner_last gsap-video">
-              <div class="banner-item br_item2 pt_img4 ">
-                    <img src="img/bi4.png" alt="" />
-                  </div>
-                </div> -->
-                <div class="brs_img" id="brs_img">
-                <img src="img/bi4 copy.png" alt="">
-              </div>
-              </div>
-            </div>
-            <div class="br_second">
-              <div class="brs_img" id="brs_img">
-                <img src="img/bi4 copy.png" alt="" class="brs_itm">
-              </div>
-              <!-- <div class="vid_con">
-                  <video loop="" playsinline="" preload="metadata" autoplay muted>
-                     <source type="video/mp4" 
-                     src="img/b7478d43.mp4">
-                     </video>
-              </div> -->
-            </div>
+          </div>
+        </div>
+       </div>
+       <div class="home-banner-video">
+        <video src="img/b7478d43.mp4" loop muted playsinline preload="metadata"></video>
+       </div>
       </section>
 
       <!-- banner ends -->
@@ -307,7 +284,7 @@
       </section>
       <!-- organic marketing section ends -->
    
-      <section class="splide" aria-label="Splide Basic HTML Example">
+      <section class="logos-track splide">
         <div class="splide__track">
           <ul class="splide__list slider_main2">
             <li class="splide__slide"><img src="img/image 69.svg" alt="" /></li>
@@ -524,6 +501,37 @@
 
       </section>
       <!-- blur section ends -->
+
+      <div class="spacer"></div>
+
+      <!-- Benefits You Get Section Starts -->
+      <section class="benefits-you-get">
+        <div class="">
+          <div class="benefits-you-get-wrap">
+            <div class="benefits-you-get-wrap-left">
+              <img src="img/benefits.png" alt="">
+            </div>
+            <div class="benefits-you-get-wrap-right">
+                <div class="benefits-you-get-head">
+                  <h2>what benefits you get</h2>
+                </div>
+                <div class="benefits-you-get-body">
+                  <p>Our powerful and productive strategies can move your business from the sidelines to the spotlight. Each service complements the others to effectively.</p>
+                </div>
+                <div class="benefits-you-get-ul">
+                  <ul>
+                    <li><h4>Reach & Engage your Target audience</h4></li>
+                    <li><h4>increased brand visibility</h4></li>
+                    <li><h4>drive business growth</h4></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Benefits You Get Section Ends -->
+
+      <div class="spacer"></div>
 
      <!-- team section start -->
      <section class="team_section">
@@ -847,16 +855,7 @@
         </div>
       </section>
       <!-- ressult section ends -->
- 
- 
-      <!-- <section>
-        <video autoplay="" loop=""
-        playsinline="" preload="metadata" autoplay>
-           <source type="video/mp4" 
-           src="https://player.vimeo.com/progressive_redirect/playback/813507019/rendition/1080p/file.mp4?loc=external&amp;signature=f2951d2067c925a6338230ca2e9d6a73abc23ea8942b134543404213ad52ab4f#t=0.001">
-       
-           </video>
-      </section> -->
+
     </div>
     <footer class="main_footer desktop-footer">
       <div class="container-fluid">
@@ -1244,41 +1243,33 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <script src="js/ScrollSmoother.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/animation.js"></script>
   
   <script>
+// cursor Script
+gsap.to(".cursor-wrap-svg img", { rotation: 540, duration: 3, repeat: -1, ease: "none" });
+const cursorRounded = document.querySelector('.cursor');
+    const moveCursor = (e) => {
+      const mouseY = e.clientY;
+      const mouseX = e.clientX;
+      gsap.to(cursorRounded, { 
+        x: mouseX,
+        y: mouseY,
+        duration: 0.3, 
+        ease: 'power2.out'
+      });
+    }
+
+window.addEventListener('mousemove', moveCursor);
+
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-   let c_btns = document.querySelectorAll(".custom_btn");
-   let cursor = document.getElementById("cursor");
-
-    c_btns.forEach(function(c_btn) {
-      c_btn.addEventListener('mouseenter', function() {
-        cursor.style.width = '2rem';
-        cursor.style.height = '2rem';
-        cursor.style.opacity = ".5"
-        // Add other styling or actions as needed
-      });
-      c_btn.addEventListener('mouseleave', function() {
-        cursor.style.width = '1rem';
-        cursor.style.height = '1rem';
-        cursor.style.opacity = "1"
-        // Add other styling or actions as needed
-      });
-    });
- 
-    const t0 = gsap.timeline({defaults:{ease:"none", repeat:500, yoyo:true}})
-.to("#rect1", {x:1100, duration:45})
-.to("#rect2", {x:1200, duration:50}, 0)
-.to("#rect3", {x:800, duration:65}, 0)
-.timeScale(4).time(150)
-
-document.addEventListener("click", 
-  ()=>t0.pause(Math.random() * t0.duration())
-)
-
 document.querySelector('.navbar_main').addEventListener("click", ()=>{
   document.querySelector('body').classList.add("active");
   document.querySelector('.main-navbar').classList.add('active');
@@ -1455,7 +1446,198 @@ x.addEventListener("change", function() {
   myFunction(x);
 });
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.home-banner-video',{
+  clipPath:"inset(0vh 0% 0vh 0%)",
+  scrollTrigger:{
+    pin:true,
+    trigger:'.home-banner',
+    scrub:2,
+    start:"top top",
+    end: "200% bottom",
+    markers:false
+  }
+
+})  
+
+document.addEventListener('DOMContentLoaded', function () {
+                        new Splide('.logos-track.splide', {
+                            type   : 'loop',
+                            drag   : 'free',
+                            focus  : 'center',
+                            arrows : false,
+                            autoWidth: true,
+                            perPage: 8,
+                            pagination : false,
+                            autoScroll: {
+                            speed: 3,
+                            pauseOnHover: false,
+                            },
+                        }).mount( window.splide.Extensions );
+                        });
+
+                        let mm = gsap.matchMedia();
+mm.add("(min-width: 992px)", () => {
+  gsap.registerPlugin(ScrollTrigger)
+  // const headingSplitText = new SplitText(heading, {type:"chars"});
+  const heading = document.querySelector(".heading");
+  const results = Splitting({ target: heading, by: "chars" });
+  const headingChars = results[0].chars;
+  // console.log(headingChars);
   
+  // mark section gsap start
+  
+  gsap.set(".mark_section .line1", { yPercent: -95 });
+  gsap.set(".mark_section .msm_l2", { yPercent: -85, left: "45%" });
+  gsap.set(".mark_section .item", { yPercent: -100 });
+  gsap.set(".mark_section .msmli2", {
+    xPercent: 90,
+    width: "100%",
+    height: "60%",
+  });
+  gsap.set(".mark_section .msmr_text", { xPercent: 61, scale: 0.2 });
+  let t2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".mark_section",
+      start: "top top",
+      end: "400% bottom",
+      pin: true,
+      markers: false,
+      scrub: 1,
+    },
+  });
+  t2.to(".mark_section .msm_l2", { yPercent: -20 }, 0)
+    .to(".mark_section .line1", { yPercent: -20 }, "<")
+    .to(".mark_section .msmli1", { yPercent: 250, scale: 1.2 }, "<")
+    .to(".mark_section .msmli2", { yPercent: 35 }, "<")
+    .to(".mark_section .msmli3", { yPercent: 10, scale: 1.1 }, "-=.25")
+    .to(".mark_section .msmr_text", { xPercent: 0, scale: 1 })
+    .to(
+      ".mark_section .msmli2",
+      { xPercent: 87, width: "50%", height: "55%" },
+      "<"
+    )
+    //  .to(".mark_section .msmli3",{scale:1},"<")
+    .to(".mark_section .msmli1", { scale: 1.1 }, "<")
+    .to(".mark_section .msm_l2", { left: "22%" }, "<")
+    .to(".mark_section .line1", { yPercent: 40 }, "<");
+  //  .to(".mark_section .line1",{yPercent:-100},"<")
+  
+  // mark section gsap ends
+  
+  // client section gsap start
+  
+  gsap.set(".client_section .ci_left", { xPercent: 0 });
+  gsap.set(".client_section .ci_right", { xPercent: 0 });
+  
+  let t3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".client_section",
+      start: "top top",
+      ends: "2000% bottom",
+      pin: true,
+      markers: false,
+      scrub: 1,
+    },
+  });
+  t3.to(".client_section .ci_right", { xPercent: -75 }, 0);
+  t3.to(".client_section .ci_left", { xPercent: -170 }, "<").to(
+    ".c_inner .line1",
+    { opacity: 0 },
+    "<"
+  );
+  
+  // client section gsap ends
+  
+  //  blur section gsap start
+  gsap.fromTo(
+    headingChars,
+    {
+      filter: "blur(0.10)",
+    },
+    {
+      opacity: 1,
+      color: "#35183D",
+      stagger: {
+        from: "left",
+        amount: 1,
+      },
+      scrollTrigger: ".heading",
+    }
+  );
+  
+  //  blur section gsap ends
+  
+  //  team section gsap start
+  
+  gsap.set(".team_section .tmi2_text", { xPercent: 80 });
+  gsap.set(".tmi2_box", { yPercent: 100 });
+  
+  let t4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".team_section",
+      start: "top top",
+      end: "250% bottom",
+      pin: true,
+      markers: false,
+      scrub: 1,
+    },
+  });
+  t4.to(".team_section .tmi2_text", { xPercent: 0 }, 0).to(
+    ".tmi2_box",
+    { yPercent: 0 },
+    "after"
+  );
+
+})
+
+// mm.revert();
+
+
+var s = Splitting();
+
+//  team section gsap ends
+// }
+
+$(document).ready(function () {
+  
+});
+
+
+
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+          stagePadding:0,
+        },
+        1100: {
+          items: 1,
+          stagePadding:180,
+        },
+      },
+    });
+
+    document.querySelectorAll('.psm_blog a, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+        element.addEventListener('mouseenter',()=>{
+          document.querySelector('.cursor-wrap-svg').style.opacity = "1";
+        })
+    })
+    document.querySelectorAll('.psm_blog a, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+        element.addEventListener('mouseout',()=>{
+          document.querySelector('.cursor-wrap-svg').style.opacity = "0";
+        })
+    })
+                      
     </script>
   </body>
 </html>

@@ -5,6 +5,7 @@ General CSS
 */
 html {
   scroll-behavior: smooth;
+  cursor: none !important;
 }
 :root {
   --ignytpurple: #36193e;
@@ -57,6 +58,7 @@ h6 {
   margin: 0;
   padding: 0;
   color: var(--ignytpurple);
+  font-family: var(--pp);
 }
 ul,
 ol {
@@ -78,8 +80,8 @@ h1 {
   font-family: "PP Formula Compressed";
 }
 h2 {
-  font-size: 86px;
-  line-height: 84px;
+  font-size: clamp(40px,6vw,86px);
+  line-height: 120%;
   font-weight: 900;
   color: var(--headingcolor);
   font-family: "PP Formula Compressed";
@@ -140,7 +142,12 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
-
+a{
+  cursor: none!important;
+}
+button{
+  cursor: none!important;
+}
 .custom_btn {
   padding: 10px 27px;
   text-align: center;
@@ -219,7 +226,9 @@ button {
 .height_100vh {
   height: 100vh;
 }
-
+.spacer{
+  height: 200px;
+}
 /* cursor start */
 
 .cursor {
@@ -230,39 +239,39 @@ button {
   height: 1rem;
   z-index: 999;
   pointer-events: none;
-  /* opacity: */
-  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.cursor div {
+.cursor .cursor-wrap {
   position: absolute;
-  top: 5px;
-  left: 5px;
   display: grid;
-  /* border: 1px solid black; */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color:rgb(255, 108, 38);
   place-items: center;
 }
-.cursor div div {
-  border: 1px solid #ff6c26;
-  border-radius: 50%;
-  animation: pulse 2.5s linear infinite;
-  /* box-shadow: 0 0 50px 5px #56204e; */
-}
-.cursor div:nth-child(1),
-.cursor div:nth-child(2) {
-  width: 100%;
+.cursor-wrap-svg img{
   height: 100%;
-}
-.cursor div:nth-child(1) {
-  transition: transform 0.2s ease-out;
-}
-.cursor div:nth-child(2) {
-  transition: transform 0.1s ease-out;
-}
-.cursor div:nth-child(2) div {
-  background: #ff6c26;
-  border-radius: 50%;
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+  animation: rotation 3s infinite linear;
+}
+.cursor-wrap-svg{
+  opacity: 0;
+  width: 81px;
+  height: 81px;
+}
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
 /* cursor ends */
 
@@ -602,7 +611,9 @@ button {
 
 /* organic marketing section start */
 .organic_main {
-  padding: 92px 120px;
+  padding: 92px 0px;
+  max-width: 97ch;
+  margin: 0 auto;
 }
 .organic_main h2 {
   color: #220e28;
@@ -625,10 +636,12 @@ button {
 }
 .omb_para1 {
   max-width: 42ch;
+  font-size: 14px;
 }
 .omb_para2 {
   margin-top: 15px;
   max-width: 54ch;
+  font-size: 14px;
 }
 .omb_btn .custom_btn {
   margin-top: 40px;
@@ -644,26 +657,18 @@ button {
 
 /* slider section */
 .slider_main2{
-  /* margin-top: 60px; */
   display: flex;
   column-gap: 16.82px;
   column-gap: 160px;
+  align-items: center;
 }
 .slider_main2 .item{
   border-radius: 27.097px;
   overflow: hidden;
-  /* border: 1px solid red; */
 }
-
-
-
-
-
-
-
-
-
-
+.splide__slide{
+  height: 100%;
+}
 /* mark section start */
 .mark_section {
   /* border: 1px solid red; */
@@ -733,12 +738,79 @@ button {
 }
 .msmrt_list ul {
   list-style: disc;
-  /* border: 1px solid red; */
   padding-left: 3%;
   color: #aba499;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 /* mark section ends */
+
+/* Homepage CSS Starts */
+.home-banner{
+  background: linear-gradient(42.77deg, rgb(53, 24, 61) 20.755%,rgb(86, 32, 78) 113.075%);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-banner-wrap{
+  display: flex;
+  gap: 20px;
+  padding-left: 50px;
+}
+.home-banner-wrap-left{
+  display: flex;
+  flex-wrap: wrap;
+  width: 73%;
+}
+.home-banner-text .home-banner-img{
+  max-height: 8vw;
+  width: 12vw;
+
+}
+.home-banner-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-banner-video {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  inset: 0px;
+  clip-path: inset(32vh 2% 33vh 88%);
+}
+.home-banner-text span{
+  color: rgb(255, 255, 255);
+  font-family: var(--pp);
+  font-size: clamp(84px,9vw,134px);
+  font-weight: 900;
+  line-height: 98%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.home-banner-text{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+}
+.home-banner-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-banner-wrap-right{
+  width: 12.5%;
+  max-height: 247px;
+}
+.home-banner-wrap-right .home-banner-img{
+  height: 100%;
+}
+/* Homepage CSS Ends */
 
 /* client section start */
 
@@ -834,6 +906,9 @@ button {
   /* height: 100vh; */
   /* border: 1px solid red; */
 }
+.blur_section .bm_top .bmt_para{
+  padding-top: 24px;
+}
 .bm_top {
   display: flex;
   flex-direction: column;
@@ -843,16 +918,19 @@ button {
   margin-top: 53px;
 }
 .bmt_heading h4 {
-  max-width: 30ch;
+  max-width: 35ch;
 }
 .bmt_para p {
   max-width: 56ch;
 }
 .heading {
-  line-height: 100px;
+  line-height: 120%;
   text-align: center;
   /* color:none; */
   color: rgba(195, 195, 195, 0.6);
+}
+.heading a{
+  display: inline-block;
 }
 .bm_btm {
   margin-top: 250px;
@@ -865,6 +943,37 @@ button {
 }
 
 /* blur section ends */
+
+/* Benefit You Get Section Css Starts */
+.benefits-you-get-wrap{
+  display: flex;
+  align-items: center;
+  gap: 58px;
+}
+.benefits-you-get-wrap-left{
+  width: 40%;
+}
+.benefits-you-get-wrap-right{
+  width: 60%;
+}
+.benefits-you-get-wrap-left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.benefits-you-get-ul{
+  padding-top: 53px;
+}
+.benefits-you-get-body{
+  padding-top: 17px;
+}
+.benefits-you-get-body p{
+  max-width: 56ch;
+}
+.benefits-you-get-ul ul li h4{
+  color: rgb(83, 57, 90);
+}
+/* Benefit You Get Section Css Ends */
 
 /* team section start */
 .team_section {
@@ -1077,6 +1186,7 @@ button {
   z-index: 2;
   width: 92%;
   max-height: 180px;
+  pointer-events: none;
 }
 .psmbtmi_top .para1 {
   text-transform: uppercase;
@@ -1108,13 +1218,32 @@ button {
   inset: 0;
   object-fit: cover;
 }
-
+.project_section .owl-theme .owl-dots .owl-dot span{
+  background:  rgb(189, 172, 147);
+  width: 19.44px;
+  height: 2.78px;
+  border-radius: none;
+  margin: 0px;
+}
+.project_section .owl-theme .owl-dots .owl-dot.active span, .project_section .owl-theme .owl-dots .owl-dot:hover span{
+  background: rgb(53, 24, 61);
+}
+.project_section .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
 /* project_section ends */
 
 /* moto section  */
 .moto_main {
   padding: 90px 0px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mm_text_bottom {
   display: flex;
@@ -1123,16 +1252,14 @@ button {
 .mm_text_bottom p {
   color: #f8f5f2;
   font-family: var(--pp);
-  font-size: 360.254px;
+  font-size: clamp(137px,24vw,350.254px);
   font-weight: 900;
   line-height: 100%;
   text-transform: uppercase;
 }
 .mm_text_top {
-  position: absolute;
-  top: 38%;
-  left: 26%;
-  z-index: 2;
+ position: absolute; 
+ margin-bottom: 40px;
 }
 .mm_text_top h3 {
   font-family: var(--pp);
@@ -1171,6 +1298,12 @@ button {
 }
 .mmbtm_text_btm {
   margin-top: 24px;
+}
+.mmbtm_text_btm .trans-third:not(:first-child){
+  margin-top: 20px;
+}
+.mmbtm_text_btm .trans-forth{
+  margin-top: 40px;
 }
 .mmbtm_text_btm p {
   max-width: 54ch;
@@ -1395,6 +1528,9 @@ button {
 .ftml_email {
   margin-top: 10px;
 }
+.ftml_email h6{
+  font-family: var(--bodyFont);
+}
 .ftml_email span p {
   display: inline-block;
   letter-spacing: 1.75px;
@@ -1508,6 +1644,9 @@ button {
   margin-left: 19px;
   color: #000;
 }
+.ftm_heading h6{
+  font-family: var(--bodyFont);
+}
 /* footer ends */
 
 @media only screen and (max-width:1200px){
@@ -1520,6 +1659,10 @@ button {
   .ftml_email span p{
     font-size: 14px;
   }
+  .benefits-you-get-wrap{
+    align-items: stretch;
+  }
+  
 }
 @media only screen and (max-width:1100px){
   .main-navbar-top{
@@ -1538,6 +1681,9 @@ button {
 }
 
 @media only screen and (max-width:991px){
+  .spacer{
+    height: 150px;
+  }
   .main-navbar-top-menu-links ul li{
     font-size: 14px;
   }
@@ -1550,9 +1696,63 @@ button {
   .ft_main{
     grid-template-columns: repeat(2, 1fr);
   }
+  .organic_marketing_main .om_top .omt_para h2{
+    display: none;
+  }
+  .omt_heading span{
+    display: inline-block;
+  }
+  .organic_marketing_main .om_top .omt_para{
+    padding-top:40px;
+  }
+  .organic_marketing_main .om_bottom{
+    padding-top: 30px;
+  }
+  .organic_marketing_main .omb_para2{
+    margin-top: 30px;
+  }
+  .bm_btm{
+    margin-top: 130px;
+  }
+  .heading{
+    color: var(--headingcolor);
+  }
+  .our_moto_section .mm_btm{
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .our_moto_section .mmbtm_right{
+    width: 100%;
+  }
+  .our_moto_section .mmbtm_left{
+    align-items: center;
+  }
+  .our_moto_section .mmbtm_heading h3{
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width:767px){
+  .spacer{
+    height: 100px;
+  }
+  .benefits-you-get-wrap{
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  .benefits-you-get-wrap-right{
+    width: 100%;
+    text-align: center;
+  }
+  .benefits-you-get-body p {
+    margin: 0 auto;
+  }
+  .benefits-you-get-wrap-left{
+    width: 100%;
+  }
+  h4{
+    font-size: 24px;
+  }
   .container-fluid{
     padding: 0 18px;
   }
@@ -1792,4 +1992,33 @@ button {
     padding: 60px 17px;
     height: fit-content;
   }
+  .blur_section{
+    padding-bottom: 0px;
+  }
+  .ocm_item{
+    flex-direction: column;
+  }
+  .oci_right{
+    position: static;
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+  }
+  .oc_main .oci_left{
+    padding-top: 100%;
+  }
+  .oc_main .oci_left{
+    width: 100%;
+  }
+  .owl-item.active .oc_main .oci_right{
+    width: 100%;
+  }
+  .owl-item.active .oc_main .oci_left{
+    width: 100%;
+  }
+  .ocir_top{
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 }
+
