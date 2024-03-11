@@ -88,7 +88,7 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  font-size: 48px;
+  font-size: clamp(38px,4vw,48px);
   font-weight: 900;
   line-height: 48.5px;
   color: var(--ignytpurple);
@@ -237,7 +237,7 @@ button {
   left: 0;
   width: 1rem;
   height: 1rem;
-  z-index: 999;
+  z-index: 9999;
   pointer-events: none;
   display: flex;
   flex-direction: column;
@@ -264,6 +264,7 @@ button {
   opacity: 0;
   width: 81px;
   height: 81px;
+  position: relative;
 }
 @keyframes rotation {
   from {
@@ -867,6 +868,9 @@ button {
   /* top: 0; */
   width: 65%;
 }
+.ci_right.mob{
+  display: none;
+}
 .ci_right .cir_main {
   display: flex;
   column-gap: 30px;
@@ -879,6 +883,54 @@ button {
   padding: 32px;
   background-color: #fff;
   min-width: 390px;
+  position: relative;
+}
+.circ_play:hover .hover-view{
+  opacity: 1;
+}
+.cir_card .circ_play{
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.hover-view{
+  opacity: 0;
+  transition: .2s ease all;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hover-view img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hover-view img:nth-child(2){
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  transform-origin: center center;
+  animation: rotation 3s infinite linear;
+}
+.play-btn-wrap{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.play-btn{
+  position: absolute;
+  opacity: 1;
+  transition: .2s ease all;
+}
+.circ_play:hover .play-btn{
+  opacity: 0;
 }
 .circ_heading h5 {
   text-transform: uppercase;
@@ -1052,6 +1104,7 @@ button {
   background: #efeae3;
   /* border: 1px solid red; */
   padding: 76px 0px 140px 0px;
+  overflow: hidden;
 }
 .psmt_para p {
   color: #220e28;
@@ -1173,6 +1226,9 @@ button {
   position: relative;
   column-gap: 35px;
 }
+.psmbtm_card_mobile{
+  display: none;
+}
 .psmbtm_item {
   /* min-width: 392px; */
   position: relative;
@@ -1252,7 +1308,7 @@ button {
 .mm_text_bottom p {
   color: #f8f5f2;
   font-family: var(--pp);
-  font-size: clamp(137px,24vw,350.254px);
+  font-size: clamp(137px,23vw,350.254px);
   font-weight: 900;
   line-height: 100%;
   text-transform: uppercase;
@@ -1264,6 +1320,7 @@ button {
 .mm_text_top h3 {
   font-family: var(--pp);
   text-transform: uppercase;
+  text-align: center;
 }
 .mm_text_top p {
   color: #555;
@@ -1730,6 +1787,163 @@ button {
   .our_moto_section .mmbtm_heading h3{
     text-align: center;
   }
+  .mmbtmr_inner{
+    width: 100%;
+  }
+  .tmi2_box{
+    position: relative;
+    height: auto;
+    margin-top: -60px;
+  }
+  .team_section .team_main, .team_section .tm_item{
+    flex-direction: column;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .tmi2b_inner{
+    width: 80%;
+  }
+  .psmbtm_card_mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin-top: 50px;
+  }
+  .psmbtm_card_mobile_carou-btn{
+    text-align: center;
+  }
+  .psmbtm_card_mobile_carou-btn a{
+    color: rgb(255, 108, 38);
+    font-family: var(--bodyFont);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 0%;
+    letter-spacing: 10.5%;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(255, 108, 38);
+  }
+  .psmbtm_card{
+    display: none;
+  }
+  .psmbtm_right{
+    display: none;
+  }
+  .psmt_para p{
+    text-align: center;
+  }
+  .psmbtm_heading{
+    justify-content: center;
+  }
+  .psmbtmi_top{
+    bottom: -100px;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .psmbtm_card_mobile_carou.owl-carousel .owl-stage-outer{
+    overflow: visible;
+  }
+  .psmbtm_card_mobile_carou.owl-theme .owl-nav{
+    position: absolute;
+    width: 100%;
+    bottom: 20vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .psmbtm_card_mobile_carou.owl-theme .owl-nav [class*='owl-']{
+    margin: 0;
+  }
+  .psmbtm_card_mobile_carou.owl-theme .owl-nav button:nth-child(1){
+    margin-left: -15px;
+  }
+  .psmbtm_card_mobile_carou.owl-theme .owl-nav button:nth-child(2){
+    margin-right: -15px;
+  }
+  .ci_left{
+    left: 0px;
+  }
+  .c_inner{
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+  .c_inner .line1{
+    position: relative;
+    height: 80px;
+    top: 50px;
+    left: 35px;
+  }
+  .client_section{
+    height: auto;
+    padding: 50px 0;
+  }
+  .c_main{
+    height: auto;
+  }
+  .ci_right.mob{
+    display: block;
+    width: 100%;
+  }
+  .ci_right.desk{
+    display: none;
+  }
+  .cir_card{
+    min-width: 100%;
+    padding-bottom: 100px;
+  }
+  .circ_para{
+    max-width: 40ch;
+  }
+  .cir_card .circ_play{
+    right: 20px;
+    top: 20px;
+  }
+  .ci_right .cir_main{
+    column-gap: 0px;
+  }
+  .ci_right .splide__arrow{
+    bottom: 4%;
+    top: auto;
+  }
+  .ci_right .splide__arrow--prev{
+    left: 1.9em;
+  }
+  .ci_right .splide__arrow--next{
+    left: 5em;
+  }
+  .ms_main{
+    flex-direction: column;
+    height: auto;
+    gap: 60px;
+  }
+  .msm_left{
+    width: 100%;
+  }
+  .msm_right{
+    width: 100%;
+  }
+  .msm_left .item{
+    position: static;
+  }
+  .msm_left .item:not(:nth-child(2)){
+      display: none;
+  }
+  .ms_main .line1{
+    position: static;
+    height: 100px;
+  }
+  .ms_main .msm_l2{
+    position: absolute;
+    height: 50%;
+  }
+  .msm_left .item.msmli2{
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -2020,5 +2234,86 @@ button {
     justify-content: center;
     margin-bottom: 15px;
   }
+  .tmi2b_inner{
+    width: 90%;
+  }
+  .tmi2_text p{
+    font-size: 45vw;
+  }
+  .tmi2b_inner{
+    padding: 50px 25px;
+    text-align: center;
+  }
+  .tmi2_box{
+    margin-top: 0px;
+  }
+  .mm_text_bottom p{
+    text-align: center;
+  }
+  .mm_text_top p{
+    bottom: -40vh;
+    position: absolute;
+  }
+  .moto_main{
+    padding-bottom: 40vh;
+  }
+  .project_section{
+    padding: 76px 0px 100px 0px;
+  }
+  .ci_left{
+    width: 100%;
+  }
+  .cir_card .circ_play{
+    right: 10px;
+    top: 10px;
+  }
+  .circ_heading h5{
+    max-width: 18ch;
+  }
+  .ms_main .line1{
+    height: 20px;
+  }
+  .ms_main .msm_l2{
+    height: 25%;
+  }
 }
 
+.modal-video {
+  position: relative;
+  padding-top: 60%;
+}
+.modal-video::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  z-index: 0;
+  background-color: black;
+  opacity: 0.2;
+}
+.modal-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.video-cross{
+  position: absolute;
+  right: 45px;
+  top: 25px;
+  z-index: 2;
+}
+.video-controls{
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 35px;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+.modal.show .modal-dialog{
+  max-width: 750px;
+}
