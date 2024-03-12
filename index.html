@@ -1028,7 +1028,7 @@
       <!-- results section start -->
       <section class="result_section">
         <div class="container-fluid">
-          <div class="result_main">
+          <div class="result_main desk">
             <div class="rm_top">
               <div class="rmt_left">
                 <div class="rmtl_top">
@@ -1057,6 +1057,45 @@
                       src="img/cash-macanaya-Basu8sd1PQ0-unsplash222.png"
                       alt=""
                     />
+                  </div>
+                </div>
+                <div class="rmtr_item2">
+                  <img src="img/image 161.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="rm_bottom">
+              <a href="" class="custom_btn">
+                <span>get started</span>
+                <div class="transition"></div>
+                <!-- <button class="custom_btn"></button> -->
+              </a>
+              <!-- <button class="custom_btn">get started</button> -->
+            </div>
+          </div>
+          <div class="result_main mob">
+            <div class="rm_top">
+              <div class="rmt_left">
+                <div class="rmtl_top">
+                  <div><span>Ready</span></div>
+                  <div><span>to</span></div>
+                </div>
+                <div class="rmtl_bottom">
+                  <div><span>get</span></div>
+                  <div><span>the</span></div>
+                  <div><span>results?</span></div>
+                  <div class="rmtlt_img">
+                    <img
+                      src="img/cash-macanaya-Basu8sd1PQ0-unsplash.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="rmt_right">
+                <div class="rmtr_item1">
+                  <div class="rmtri_txt">
+                    <h3>our door is open</h3>
                   </div>
                 </div>
                 <div class="rmtr_item2">
@@ -1729,8 +1768,8 @@ mm.add("(min-width: 992px)", () => {
   
   // mark section gsap start
   
-  gsap.set(".mark_section .line1", { yPercent: -95 });
-  gsap.set(".mark_section .msm_l2", { yPercent: -85, left: "45%" });
+  gsap.set(".mark_section .line1", { yPercent: -105 });
+  gsap.set(".mark_section .msm_l2", { yPercent: -105, left: "45%" });
   gsap.set(".mark_section .item", { yPercent: -100 });
   gsap.set(".mark_section .msmli2", {
     xPercent: 90,
@@ -1744,16 +1783,18 @@ mm.add("(min-width: 992px)", () => {
       start: "top top",
       end: "400% bottom",
       pin: true,
-      markers: false,
+      markers: true,
       scrub: 1,
     },
   });
-  t2.to(".mark_section .msm_l2", { yPercent: -20 }, 0)
-    .to(".mark_section .line1", { yPercent: -20 }, "<")
+  t2.to(".mark_section .msm_l2", { yPercent: -40}, 0)
+    .to(".mark_section .line1", { yPercent: -40}, "<")
     .to(".mark_section .msmli1", { yPercent: 250, scale: 1.2 }, "<")
     .to(".mark_section .msmli2", { yPercent: 35 }, "<")
     .to(".mark_section .msmli3", { yPercent: 10, scale: 1.1 }, "-=.25")
     .to(".mark_section .msmr_text", { xPercent: 0, scale: 1 })
+    .to(".mark_section .msm_l2", { opacity: 0}, "<")
+    .to(".mark_section .line1", { opacity: 0}, "<")
     .to(
       ".mark_section .msmli2",
       { xPercent: 87, width: "50%", height: "55%" },
@@ -1769,25 +1810,49 @@ mm.add("(min-width: 992px)", () => {
   
   // client section gsap start
   
-  gsap.set(".client_section .ci_left", { xPercent: 0 });
-  gsap.set(".client_section .ci_right", { xPercent: 0 });
+  // gsap.set(".client_section .ci_left", { xPercent: 0 });
+  // gsap.set(".client_section .ci_right", { xPercent: 0 });
   
-  let t3 = gsap.timeline({
+  // let t3 = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".client_section",
+  //     start: "top top",
+  //     ends: "2000% bottom",
+  //     pin: true,
+  //     markers: false,
+  //     scrub: 1,
+  //   },
+  // });
+  // t3.to(".client_section .ci_right", { xPercent: -75 }, 0);
+  // t3.to(".client_section .ci_left", { xPercent: -170 }, "<").to(
+  //   ".c_inner .line1",
+  //   { opacity: 0 },
+  //   "<"
+  // );
+
+  // Get all .cir_card elements
+const cirCards = document.querySelectorAll('.client_section .cir_card');
+
+// Calculate the total width of all .cir_card elements
+let totalWidth = 0;
+cirCards.forEach(card => {
+    totalWidth += card.offsetWidth;
+});
+console.log(totalWidth, "total hai yeh");
+
+// GSAP animation with dynamic xPercent value
+gsap.to('.c_inner', {
+    x: -(totalWidth - 390),
     scrollTrigger: {
-      trigger: ".client_section",
-      start: "top top",
-      ends: "2000% bottom",
-      pin: true,
-      markers: false,
-      scrub: 1,
-    },
-  });
-  t3.to(".client_section .ci_right", { xPercent: -75 }, 0);
-  t3.to(".client_section .ci_left", { xPercent: -170 }, "<").to(
-    ".c_inner .line1",
-    { opacity: 0 },
-    "<"
-  );
+        trigger: '.client_section',
+        pin: true,
+        scrub: true,
+        start: "top top",
+        end: "400% bottom",
+        markers: false
+    }
+});
+
   
   // client section gsap ends
   

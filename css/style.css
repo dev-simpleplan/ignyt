@@ -672,7 +672,6 @@ button {
 }
 /* mark section start */
 .mark_section {
-  /* border: 1px solid red; */
   background-color: #efeae3;
   overflow: hidden;
 }
@@ -680,7 +679,6 @@ button {
   height: 100vh;
   width: 100%;
   position: relative;
-  /* border: 2px solid white; */
   display: flex;
 }
 .ms_main .line1 {
@@ -694,18 +692,19 @@ button {
   height: 100%;
   width: 0.5px;
   position: relative;
-  /* left: 46%; */
 }
 .msm_left {
-  /* border: 1px solid orange; */
   width: 50%;
   position: relative;
-  /* overflow: hidden; */
 }
 .msm_left .item {
   position: absolute;
   z-index: 9;
-  /* border: 1px solid red; */
+}
+.msm_left .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .msmli2 img {
   width: 100%;
@@ -1406,33 +1405,33 @@ button {
   align-items: center;
   padding: 119px 0px;
 }
+.result_main.mob{
+  display: none;
+}
 .rm_top {
   display: flex;
   column-gap: 18px;
   width: 100%;
   justify-content: space-between;
-  /* border: 1px solid yellow; */
+  align-items: stretch;
 }
 .rmt_left {
   display: flex;
   flex-direction: column;
   width: 65%;
-  /* border: 1px solid wheat; */
 }
 .rmt_right {
   display: flex;
   column-gap: 21px;
-  width: 35%;
-  height: 100%;
-  /* border: 1px solid red; */
+  width: 33%;
+  height: auto;
   padding-bottom: 0px;
 }
 .rmtr_item1 {
-  /* border: 1px solid rebeccapurple; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 70%;
 }
 .rmtr_item2 {
   height: 100%;
@@ -1447,17 +1446,18 @@ button {
   font-weight: 900;
   font-family: "PP Formula Compressed";
   max-width: 8ch;
+  line-height: 110%;
+  font-size: clamp(48px,4vw,66px);
 }
 .rmtl_top {
   width: 100%;
   display: flex;
   column-gap: 20px;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
 .rmtl_top div span,
 .rmtl_bottom div span {
-  font-size: 134.5px;
+  font-size: clamp(80px,10vw,180.5px);
   font-weight: 900;
   line-height: 94%;
   text-transform: uppercase;
@@ -1470,7 +1470,6 @@ button {
   position: relative;
   overflow: hidden;
   padding-top: 50%;
-  /* margin: auto; */
 }
 .rmtri_img img {
   height: 100%;
@@ -1488,6 +1487,7 @@ button {
 .rmtl_bottom {
   display: flex;
   justify-content: space-between;
+  column-gap: 25px;
 }
 .rm_bottom {
   margin-top: 98px;
@@ -1503,8 +1503,6 @@ button {
   display: none;
 }
 .main_footer .container-fluid {
-  /* max-width: 100%; */
-  /* margin: 0px; */
   padding: 0 60px;
 }
 .ft_main {
@@ -1944,6 +1942,47 @@ button {
   .msm_left .item.msmli2{
     width: 80%;
   }
+  .result_main.mob{
+    display: block;
+  }
+  .result_main.desk{
+    display: none;
+  }
+  .rmtl_top{
+    justify-content: start;
+  }
+  .rm_top{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .rmt_left{
+    width: 100%;
+  }
+  .rmt_right{
+    width: 100%;
+  }
+  .rmtl_bottom{
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 30px;
+  }
+  .rmtr_item1{
+    width: auto;
+  }
+  .rmtr_item2{
+    height: 0%;
+    width: 20%;
+    position: relative;
+    padding-top: 20%;
+  }
+  .rmtr_item2 img{
+    position: absolute;
+    inset: 0px;
+    object-fit: cover;
+  }
+  .rm_bottom{
+    margin-top: 60px;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -2275,6 +2314,20 @@ button {
   }
   .ms_main .msm_l2{
     height: 25%;
+  }
+  .rmtl_bottom{
+    row-gap: 0px;
+  }
+  .rmtlt_img{
+    width: 100%;
+    padding-top: 30px;
+  }
+  .rmtr_item2{
+    width: 50%;
+    padding-top: 40%;
+  }
+  .rm_bottom{
+    text-align: center;
   }
 }
 
