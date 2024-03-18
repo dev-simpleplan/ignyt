@@ -200,7 +200,7 @@
 
     <div class="body_wrapper">
       <!-- banner start -->
-      <section class="home-banner">
+      <section class="home-banner desk">
        <div class="home-container">
         <div class="home-banner-wrap">
           <div class="home-banner-wrap-left">
@@ -227,6 +227,36 @@
         <video src="img/b7478d43.mp4" loop muted playsinline preload="metadata"></video>
        </div>
       </section>
+      <section class="home-banner mob">
+        <div class="home-container">
+         <div class="home-banner-wrap">
+           <div class="home-banner-wrap-left">
+             <div class="home-banner-text">
+               <span>Your</span>
+               <div class="home-banner-img one">
+                 <img src="img/banner1.png" alt="">
+               </div>
+               <span>Digital</span>
+               <div class="home-banner-img">
+                 <img src="img/banner2.png" alt="">
+               </div>
+               <span>Success</span>
+               <span>Starts</span>
+               <div class="home-banner-img">
+                <img src="img/bi3.png" alt="">
+              </div>
+              <span>Here</span>
+              <div class="home-banner-img video">
+                <img src="img/bi3 copy.png" alt="">
+                <div data-bs-toggle="modal" data-bs-target="#exampleModalBanner"  class="play-btn">
+                  <img src="img/playBtnMob.svg" alt="">
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+        </div>
+       </section>
 
       <!-- banner ends -->
 
@@ -1513,6 +1543,26 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="exampleModalBanner" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-video">
+        <video src="https://stagingdevspace.in/pja/wp-content/uploads/2024/02/23_TAK_19_Fall-Video-Refresh_15sec-1.mp4" muted autoplay="false" playsinline loop></video>
+        <div data-bs-dismiss="modal" class="video-cross">
+          <img src="img/videoCross.svg" alt="">
+        </div>
+        <div class="video-controls">
+          <div class="video-play-pause">
+            <img src="img/play2Btn.svg" alt="">
+          </div>
+          <div class="video-vol-btns">
+            <img src="img/muteBtn.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- body wrapper ends -->
 
     <!-- footer start -->
@@ -1783,7 +1833,7 @@ mm.add("(min-width: 992px)", () => {
       start: "top top",
       end: "400% bottom",
       pin: true,
-      markers: true,
+      markers: false,
       scrub: 1,
     },
   });
@@ -1807,29 +1857,6 @@ mm.add("(min-width: 992px)", () => {
   //  .to(".mark_section .line1",{yPercent:-100},"<")
   
   // mark section gsap ends
-  
-  // client section gsap start
-  
-  // gsap.set(".client_section .ci_left", { xPercent: 0 });
-  // gsap.set(".client_section .ci_right", { xPercent: 0 });
-  
-  // let t3 = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".client_section",
-  //     start: "top top",
-  //     ends: "2000% bottom",
-  //     pin: true,
-  //     markers: false,
-  //     scrub: 1,
-  //   },
-  // });
-  // t3.to(".client_section .ci_right", { xPercent: -75 }, 0);
-  // t3.to(".client_section .ci_left", { xPercent: -170 }, "<").to(
-  //   ".c_inner .line1",
-  //   { opacity: 0 },
-  //   "<"
-  // );
-
   // Get all .cir_card elements
 const cirCards = document.querySelectorAll('.client_section .cir_card');
 
@@ -1898,20 +1925,6 @@ gsap.to('.c_inner', {
 
 })
 
-// mm.revert();
-
-
-var s = Splitting();
-
-//  team section gsap ends
-// }
-
-$(document).ready(function () {
-  
-});
-
-
-
     $(".ps_main_carou.owl-carousel").owlCarousel({
       loop: true,
       margin: 20,
@@ -1925,7 +1938,6 @@ $(document).ready(function () {
         },
         1000: {
           items: 1,
-          stagePadding:0,
         },
         1100: {
           items: 1,
@@ -1942,9 +1954,11 @@ $(document).ready(function () {
       responsive: {
         0: {
           items: 1,
+          stagePadding:0,
         },
         600: {
           items: 1,
+          stagePadding:0,
         }
       },
     });
