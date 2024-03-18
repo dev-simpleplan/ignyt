@@ -1779,7 +1779,7 @@ x.addEventListener("change", function() {
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.home-banner-video',{
-  clipPath:"inset(0vh 0% 0vh 0%)",
+  clipPath:"inset(0px 0% 0px 0%)",
   scrollTrigger:{
     pin:true,
     trigger:'.home-banner',
@@ -1827,6 +1827,23 @@ mm.add("(min-width: 992px)", () => {
     height: "60%",
   });
   gsap.set(".mark_section .msmr_text", { xPercent: 61, scale: 0.2 });
+  gsap.set(".mark_section .msmr_text", { xPercent: 61, scale: 0.2 });
+  let t5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".mark_section",
+      start: "-100% top",
+      end: "400% bottom",
+      pin: false,
+      markers: false,
+      scrub: 1,
+    },
+  });
+  t5.to(".mark_section .msm_l2", { yPercent: -40}, 0)
+    .to(".mark_section .line1", { yPercent: -40}, "<")
+    .to(".mark_section .msm_l2", { opacity: 0}, "<")
+    .to(".mark_section .line1", { opacity: 0}, "<")
+    // .to(".mark_section .msm_l2", { left: "22%" }, "<")
+    .to(".mark_section .line1", { yPercent: 40 }, "<");
   let t2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".mark_section",
@@ -1837,23 +1854,17 @@ mm.add("(min-width: 992px)", () => {
       scrub: 1,
     },
   });
-  t2.to(".mark_section .msm_l2", { yPercent: -40}, 0)
-    .to(".mark_section .line1", { yPercent: -40}, "<")
-    .to(".mark_section .msmli1", { yPercent: 250, scale: 1.2 }, "<")
+  t2.to(".mark_section .msmli1", { yPercent: 250, scale: 1.2 }, "<")
     .to(".mark_section .msmli2", { yPercent: 35 }, "<")
     .to(".mark_section .msmli3", { yPercent: 10, scale: 1.1 }, "-=.25")
     .to(".mark_section .msmr_text", { xPercent: 0, scale: 1 })
-    .to(".mark_section .msm_l2", { opacity: 0}, "<")
-    .to(".mark_section .line1", { opacity: 0}, "<")
     .to(
       ".mark_section .msmli2",
       { xPercent: 87, width: "50%", height: "55%" },
       "<"
     )
     //  .to(".mark_section .msmli3",{scale:1},"<")
-    .to(".mark_section .msmli1", { scale: 1.1 }, "<")
-    .to(".mark_section .msm_l2", { left: "22%" }, "<")
-    .to(".mark_section .line1", { yPercent: 40 }, "<");
+    .to(".mark_section .msmli1", { scale: 1.1 }, "<");
   //  .to(".mark_section .line1",{yPercent:-100},"<")
   
   // mark section gsap ends
@@ -1896,7 +1907,13 @@ gsap.to('.c_inner', {
         from: "left",
         amount: 1,
       },
-      scrollTrigger: ".heading",
+      scrollTrigger:{
+        trigger:".heading",
+        start:'-10% center',
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+        markers:false,
+      }
     }
   );
   
@@ -1964,12 +1981,12 @@ gsap.to('.c_inner', {
     });
    
 
-    document.querySelectorAll('.psm_blog a, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+    document.querySelectorAll('.psm_blog a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
         element.addEventListener('mouseenter',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "1";
         })
     })
-    document.querySelectorAll('.psm_blog a, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+    document.querySelectorAll('.psm_blog a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
         element.addEventListener('mouseout',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "0";
         })
