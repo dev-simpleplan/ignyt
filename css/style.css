@@ -2434,6 +2434,48 @@ button {
     justify-content: space-between;
     height: 100%;
   }
+  .what-do-we-do-top{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .wdwd-top-right{
+    width: 100%;
+  }
+  .what-do-we-do-bottom{
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .wdwd-bottom-left{
+    width: 100%;
+  }
+  .wdwd-bottom-right{
+    width: 100%;
+  }
+  .wydwd-wrap{
+    flex-direction: column;
+    padding: 100px 0;
+  }
+  .wydwd-left{
+    width: 100%;
+  }
+  .wydwd-right{
+    width: 100%;
+  }
+  .faq-contactUsWrap{
+    flex-direction: column;
+  }
+  .fQcUw-left {
+    width: 100%;
+  }
+  .fQcUw-right{
+    width: 100%;
+  }
+  .fQcUw-right-head{
+    max-width: 100%;
+  }
+  .fQcUw-right-form{
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -2807,6 +2849,25 @@ button {
   }
   .psmbtm_card_mobile_carou.owl-theme .owl-nav{
     padding-bottom: 30vh;
+  }
+  :root {
+    --baseFont: 14px;
+  }
+  .about-banner-body{
+    padding-top: 10px;
+  }
+  .wis-bottom{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .what-do-we-do-bottom {
+    padding-top: 100px;
+  }
+  .what-do-we-do{
+    padding: 100px 0;
+  }
+  .wydwd-wrap{
+    padding: 60px 0;
   }
 }
 
