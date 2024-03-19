@@ -227,7 +227,7 @@
         <video src="img/b7478d43.mp4" loop muted playsinline preload="metadata"></video>
        </div>
       </section>
-      <section class="home-banner mob">
+      <section class="home-banner mob animate-text">
         <div class="home-container">
          <div class="home-banner-wrap">
            <div class="home-banner-wrap-left">
@@ -261,7 +261,7 @@
       <!-- banner ends -->
 
       <!-- organic marketing section start -->
-      <section class="organic_marketing_main">
+      <section class="organic_marketing_main animate-text">
         <div class="container">
           <div class="organic_main element i-v">
             <div class="om_top">
@@ -666,7 +666,7 @@
       <section class="blur_section">
         <div class="container">
           <div class="blur_main element i-v">
-            <div class="bm_top">
+            <div class="bm_top animate-text">
                 <div class="bmt_heading trans">
                   <h4 class="trans-first">All-Encompassing Digital Marketing Strategies For Success</h4>
                 </div>
@@ -699,7 +699,7 @@
       <div class="spacer"></div>
 
       <!-- Benefits You Get Section Starts -->
-      <section class="benefits-you-get">
+      <section class="benefits-you-get animate-text">
         <div class="">
           <div class="benefits-you-get-wrap">
             <div class="benefits-you-get-wrap-left">
@@ -763,7 +763,7 @@
     <section class="project_section">
       <div class="container-fluid">
         <div class="ps_main">
-          <div class="psm_top">
+          <div class="psm_top animate-text">
             <div class="psmt_para">
               <p>our projects</p>
             </div>
@@ -886,7 +886,7 @@
               </div>
           </div>
           </div>
-          <div class="psm_blog">
+          <div class="psm_blog animate-text">
               <div class="psmbtm_heading">
                     <div class="psmbtm_left">
                       <h3>featured blogs</h3>
@@ -1013,7 +1013,7 @@
       <!-- our motto section start -->
       <section class="our_moto_section">
         <div class="container-fluid">
-          <div class="moto_main element i-v">
+          <div class="moto_main element i-v animate-text">
             <div class="mm_text_bottom">
               <p>Our Motto</p>
             </div>
@@ -1025,7 +1025,7 @@
               </p>
             </div>
           </div>
-          <div class="mm_btm element i-v">
+          <div class="mm_btm animate-text element i-v">
             <div class="mmbtm_left">
               <div class="mmbtml_text trans">
                 <p class="trans-first">WHAT SETS IGNYT APART?</p>
@@ -1056,7 +1056,7 @@
       <!-- our moto section ends -->
 
       <!-- results section start -->
-      <section class="result_section">
+      <section class="result_section animate-text">
         <div class="container-fluid">
           <div class="result_main desk">
             <div class="rm_top">
@@ -1600,6 +1600,20 @@ const cursorRounded = document.querySelector('.cursor');
 
 window.addEventListener('mousemove', moveCursor);
 
+const spanR = gsap.utils.toArray(".animate-text");
+spanR.forEach((target) => {
+  
+ gsap.to(target,{
+    opacity:1,
+    y:0,
+    scrollTrigger:{
+    trigger: target,
+    start: "top 80%",
+    markers:false
+  }
+  });
+});
+
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 document.querySelector('.navbar_main').addEventListener("click", ()=>{
   document.querySelector('body').classList.add("active");
@@ -1776,10 +1790,19 @@ myFunction(x);
 x.addEventListener("change", function() {
   myFunction(x);
 });
+function setVideoHeight() {
+        var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-right .home-banner-img').clientHeight;
+        console.log(imgHeight);
+        document.querySelector('.home-banner.desk .home-banner-video').style.height = imgHeight + 'px';
+    }
+setVideoHeight();
+window.addEventListener('resize', setVideoHeight);  
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.home-banner-video',{
-  clipPath:"inset(0px 0% 0px 0%)",
+  height:'100%',
+  width:'100%',
+  right:0,
   scrollTrigger:{
     pin:true,
     trigger:'.home-banner',
@@ -1789,7 +1812,7 @@ gsap.to('.home-banner-video',{
     markers:false
   }
 
-})  
+})
 
 document.addEventListener('DOMContentLoaded', function () {
                         new Splide('.logos-track.splide', {
@@ -1981,12 +2004,12 @@ gsap.to('.c_inner', {
     });
    
 
-    document.querySelectorAll('.psm_blog a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
         element.addEventListener('mouseenter',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "1";
         })
     })
-    document.querySelectorAll('.psm_blog a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
         element.addEventListener('mouseout',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "0";
         })

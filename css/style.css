@@ -770,7 +770,7 @@ button {
   width: 73%;
 }
 .home-banner-text .home-banner-img{
-  max-height: 8vw;
+  max-height: 7vw;
   width: 12vw;
 }
 .home-banner-text .home-banner-img video{
@@ -798,11 +798,9 @@ button {
   object-fit: cover;
 }
 .home-banner-video {
-  height: 100%;
   position: absolute;
-  width: 100%;
-  inset: 0px;
-  clip-path: inset(222px 2% 222px 88%);
+  width: 10vw;
+  right: 20px;
 }
 .home-banner-text span{
   color: rgb(255, 255, 255);
@@ -1579,9 +1577,9 @@ button {
 .about-banner-head h1{
   color: rgb(255, 255, 255);
   font-family: var(--pp);
-  font-size: 97.73px;
+  font-size: clamp(50px,7vw,97.73px);
   font-weight: 900;
-  line-height: 95.45px;
+  line-height: 120%;
   letter-spacing: 0%;
   text-align: center;
   text-transform: uppercase;
@@ -1592,7 +1590,7 @@ button {
 .about-banner-sub span{
   color: rgb(255, 255, 255);
   font-family: var(--bodyFont);
-  font-size: 24px;
+  font-size: clamp(16px,2vw,24px);
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 1%;
@@ -1902,7 +1900,11 @@ button {
 /* About Page Ends */
 
 /* footer start */
-
+.animate-text{
+  opacity: 0;
+  transform: translateY(2em);
+  transition: .5s cubic-bezier(.165, .84, .44, 1);
+}
 .main_footer {
   background-color: #efeae3;
 }
