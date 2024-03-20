@@ -296,6 +296,15 @@ button {
   width: 100%;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+.main_header.black .header_logo a img{
+  filter: invert(1);
+}
+.main_header.black .navbar_text p{
+  color:  rgb(54, 25, 62);
+}
+.main_header.black .navbar_icon img{
+  filter: invert(1);
+}
 .main_header.show {
   transform: translateY(0);
   background:linear-gradient(72deg, #35183d 20.75%, #56204e 113.08%);
@@ -1363,6 +1372,12 @@ button {
   display: flex;
   justify-content: center;
 }
+.our_moto_section.with-mission .mm_text_bottom{
+  flex-direction: column;
+}
+.our_moto_section.with-mission .mm_text_bottom p:nth-child(2){
+  display: none;
+}
 .mm_text_bottom p {
   color: #f8f5f2;
   font-family: var(--pp);
@@ -1940,9 +1955,9 @@ button {
 }
 .service-banner-text h1{
   color: rgb(54, 25, 62);
-  font-size: 199.13px;
+  font-size: clamp(90px,19vw,199.13px);
   font-weight: 900;
-  line-height: 183.52px;
+  line-height: 95%;
   letter-spacing: 0%;
   text-align: center;
   text-transform: uppercase;
@@ -1959,7 +1974,7 @@ button {
 }
 .service-banner-content-wrap{
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
 .service-banner-content-wrap p{
@@ -2028,6 +2043,9 @@ button {
 .services-we-offer-list{
   padding-top: 116px;
 }
+.services-we-offer-list.mob{
+  display: none;
+}
 .services-we-offer-list ul li{
   position: relative;
   overflow: hidden;
@@ -2043,7 +2061,6 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   padding: 24px 0;
-  transition: opacity .25s;
   padding-left: 57px;
 }
 .services-we-offer-list ul li:not(:first-child):not(:last-child){
@@ -2127,6 +2144,21 @@ button {
   position: absolute;
   inset: 0px;
   pointer-events: none;
+}
+.service-we-offer-list-cont-btn a{
+  color: rgb(255, 108, 38);
+  font-family: var(--bodyFont);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 0%;
+  letter-spacing: 10.5%;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgb(255, 108, 38);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 /* Services Page Ends */
 
@@ -2365,7 +2397,15 @@ button {
   .benefits-you-get-wrap{
     align-items: stretch;
   }
-  
+  .service-banner-content-wrap p{
+    font-size: 16px;
+  }
+  .service-banner-content-left{
+    max-width: 35ch;
+  }
+  .service-banner-content-right{
+    max-width: 37ch;
+  }
 }
 @media only screen and (max-width:1100px){
   .main-navbar-top{
@@ -2383,6 +2423,12 @@ button {
   }
   .home-banner-wrap-left{
     width: 71%;
+  }
+  .service-we-offer-list-cont-wrap{
+    gap: 50px;
+  }
+  .service-we-offer-list-cont-sub{
+    font-size: 12px;
   }
 }
 
@@ -2710,6 +2756,33 @@ button {
   .fQcUw-right-form{
     max-width: 100%;
   }
+  .service-banner-content-left{
+    max-width: 30ch;
+  }
+  .service-banner-content-right{
+    max-width: 30ch;
+  }
+  .services-we-offer-list.mob{
+    display: block;
+  }
+  .services-we-offer-list.desk{
+    display: none;
+  }
+  .service-we-offer-list-cont-wrap{
+    flex-direction: column;
+  }
+  .service-we-offer-list-cont-right{
+    row-gap: 15px;
+  }
+  .service-we-offer-list-cont-head{
+    font-size: 38px;
+  }
+  .service-banner{
+    padding-top: 35vh;
+  }
+  .service-banner-text{
+    top: 30vh;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -2990,6 +3063,12 @@ button {
   .oc_main .oci_left{
     width: 100%;
   }
+  .ps_main_carou.owl-carousel .oci_left{
+    width: 100%;
+  }
+  .owl-item.active .oc_main .oci_left{
+    width: 100%;
+  }
   .owl-item.active .oc_main .oci_right{
     width: 100%;
   }
@@ -3082,7 +3161,7 @@ button {
     padding-top: 100%;
   }
   .psmbtm_card_mobile_carou.owl-theme .owl-nav{
-    padding-bottom: 30vh;
+    padding-bottom: 15vh;
   }
   :root {
     --baseFont: 14px;
@@ -3102,6 +3181,56 @@ button {
   }
   .wydwd-wrap{
     padding: 60px 0;
+  }
+  .service-banner-content-wrap{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .service-banner{
+    padding-top: 40vh;
+  }
+  .service-banner-text{
+    top: 24vh;
+  }
+  .our_moto_section.with-mission .moto_main{
+    padding-bottom: 90px;
+  }
+  .our_moto_section.with-mission .mm_text_bottom p:nth-child(2){
+    display: block;
+  }
+  .fQcUw-left{
+    padding: 100px 30px;
+  }
+  .fQcUw-right{
+    padding: 100px 30px;
+  }
+  .service-we-offer-list-cont-head{
+    font-size: 28px;
+  }
+  .service-we-offer-list-cont{
+    padding: 40px 35px;
+  }
+  .services-we-offer-sub-head {
+    padding-left: 20px;
+  }
+  .services-we-offer-list ul li button{
+    padding: 20px 0;
+    padding-left: 20px;
+  }
+  .services-we-offer-list{
+    padding-top: 40px;
+  }
+  .services-we-offer-list ul li button{
+    font-size: 21px;
+  }
+  .services-we-offer-sub-head span{
+    font-size: 12px;
+    max-width: 22ch;
+    display: block;
+  }
+  .oc_main .trans p, .oc_main .trans .custom_btn{
+    transform: translateY(250%);
   }
 }
 

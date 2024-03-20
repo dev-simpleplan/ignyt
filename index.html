@@ -1797,12 +1797,12 @@ gsap.to('.c_inner', {
     });
    
 
-    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
-        element.addEventListener('mouseenter',()=>{
+    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading').forEach((element)=>{
+        element.addEventListener('mouseover',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "1";
         })
     })
-    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading, .blur_section .heading a, .blur_section .heading a span').forEach((element)=>{
+    document.querySelectorAll('.psm_blog .psmbtm_card a, .blur_section .heading').forEach((element)=>{
         element.addEventListener('mouseout',()=>{
           document.querySelector('.cursor-wrap-svg').style.opacity = "0";
         })
