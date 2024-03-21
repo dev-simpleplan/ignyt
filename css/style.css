@@ -1389,6 +1389,7 @@ button {
 .mm_text_top {
  position: absolute; 
  margin-bottom: 40px;
+ left: 0;
 }
 .mm_text_top h3 {
   font-family: var(--pp);

@@ -746,7 +746,7 @@
               </div>
               <div class="tmi2bi_btn">
                 <a href="" class="custom_btn">
-                  <span>get started with us</span>
+                  <span>Our team</span>
                   <div class="transition"></div>
                   <!-- <button class="custom_btn"></button> -->
                 </a>
@@ -1585,29 +1585,32 @@
   
   <script>
     //Home JS 
-function setVideoHeight() {
-        var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-right .home-banner-img').clientHeight;
-        console.log(imgHeight);
-        document.querySelector('.home-banner.desk .home-banner-video').style.height = imgHeight + 'px';
-    }
-setVideoHeight();
-window.addEventListener('resize', setVideoHeight);  
+document.addEventListener("DOMContentLoaded", (event) => {
+        function setVideoHeight() {
+              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-right .home-banner-img').clientHeight;
+              document.querySelector('.home-banner.desk .home-banner-video').style.height = imgHeight + 'px';
+          }
+      setVideoHeight();
+      window.addEventListener('resize', setVideoHeight);  
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('.home-banner-video',{
+        height:'100%',
+        width:'100%',
+        right:0,
+        scrollTrigger:{
+          pin:true,
+          trigger:'.home-banner',
+          scrub:2,
+          start:"top top",
+          end: "200% bottom",
+          onLeave: ()=>{
+            document.querySelector('.home-banner-video video').play();
+          },
+          markers:false
+        }
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('.home-banner-video',{
-  height:'100%',
-  width:'100%',
-  right:0,
-  scrollTrigger:{
-    pin:true,
-    trigger:'.home-banner',
-    scrub:2,
-    start:"top top",
-    end: "200% bottom",
-    markers:false
-  }
-
-})
+      })
+});
 
 document.addEventListener('DOMContentLoaded', function () {
                         new Splide('.logos-track.splide', {
