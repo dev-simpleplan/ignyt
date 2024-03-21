@@ -352,7 +352,7 @@
                         <div class="tct2-l">
                             <div class="tct2-l-img">
                                 <img src="img/clientT1.png" alt="">
-                                <img src="img/playTesti.svg" alt="">
+                                <img data-bs-toggle="modal" data-bs-target="#testi1" src="img/playTesti.svg" alt="">
                             </div>
                             <div class="tct2-l-content">
                                 <div class="tct2-l-content-wrap">
@@ -403,7 +403,7 @@
                             </div>
                             <div class="tct2-r-img">
                                 <img src="img/clientT2.png" alt="">
-                                <img src="img/playTesti.svg" alt="">
+                                <img data-bs-toggle="modal" data-bs-target="#testi2" src="img/playTesti.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1022,6 +1022,27 @@ $(document).ready(function () {
                 splide3.go('+1'); // Go to next slide
             });
     });
+
+    $(".video-vol-btns").click(function() {
+                if($(this).parent().siblings("video")[0].muted){
+                    $(this).parent().siblings("video")[0].muted = false;
+                    $(this).addClass("active");
+                }else{
+                    $(this).parent().siblings("video")[0].muted = true;
+                    $(this).removeClass("active");
+                }
+            });
+            $('.video-play-pause').click(function () {
+            var video = $(this).parent().siblings('video')[0];
+
+            if (video.paused) {
+                // Video is paused, play it and hide the button
+                video.play();
+            } else {
+                // Video is playing, pause it and show the button
+                video.pause();
+            }
+        });  
     </script>
   </body>
   
