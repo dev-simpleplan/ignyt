@@ -2619,6 +2619,137 @@ button {
 .serviceTemp-2-right p:not(:first-child){
   margin-top: 15px;
 }
+.serviceTemp-left-body{
+  padding-top: 28px;
+}
+.serviceTemp-3-wrap{
+  display: flex;
+}
+.serviceTemp-3-left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.serviceTemp-3-right-body p:not(:first-child){
+  margin-top: 15px;
+}
+.serviceTemp-3-right-body p span{
+  font-weight: 700;
+  color:rgb(251, 90, 13);
+}
+.serviceTemp-3-left{
+  width: 35%;
+}
+.serviceTemp-3-right{
+  width: 65%;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+.serviceTemp-3-right-head h3{
+  text-transform: uppercase;
+}
+.serviceTemp-3-right-body{
+  padding-top: 39px;
+}
+.serviceTemp-3-right-wrap{
+  max-width: 53ch;
+  margin: 0 auto;
+}
+.serviceTemp-3-right-head{
+  max-width: 40ch;
+}
+.serviceTemp-4-head{
+  max-width: 40ch;
+  text-align: center;
+  margin: 0 auto;
+}
+.serviceTemp-4-head h3{
+  text-transform: uppercase;
+}
+.serviceTemp-4-srat{
+  display: flex;
+  align-items: center;
+}
+.serviceTemp-4-srat.rev{
+  flex-direction: row-reverse;
+}
+.serviceTemp-4-srats{
+  padding-top: 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 122px;
+}
+.serviceTemp-4-srat-right-head h3{
+  text-transform: uppercase;
+}
+.serviceTemp-4-srat-right-body p{
+  font-size: 14px;
+  color: rgb(119, 119, 119);
+}
+.serviceTemp-4-srat-right-body p span{
+  font-weight: 700;
+  color: rgb(251, 90, 13);
+}
+.serviceTemp-4-srat-right-body p:not(:first-child){
+  margin-top: 20px;
+}
+.serviceTemp-4-srat-right-wrap{
+  max-width: 42ch;
+  margin: 0 auto;
+}
+.serviceTemp-4-srat-right-body{
+  padding-top: 20px;
+}
+.serviceTemp-4-srat-left{
+   width: 50%;
+}
+.serviceTemp-4-srat-right{
+  width: 50%;
+}
+.serviceTemp-4-srat-left img{
+    width: 100%;
+}
+.serviceTemp-5{
+  background-color: rgb(239, 234, 227);
+}
+.serviceTemp-5-wrap{
+  display: flex;
+  align-items: center;
+}
+.serviceTemp-5-wrap-left{
+  width: 40%;
+  height: 100%;
+  max-height: 800px;
+  overflow: hidden;
+}
+.serviceTemp-5-wrap-left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.serviceTemp-5-wrap-right{
+  padding:30px;
+  width: 60%;
+}
+.serviceTemp-5-wrap-right-wrap{
+  max-width: 48ch;
+  margin: 0 auto;
+}
+.serviceTemp-5-wrap-right-body p{
+    color:rgb(85, 85, 85)
+}
+.serviceTemp-5-wrap-right-body p span{
+  font-weight: 700;
+  color: rgb(251, 90, 13);
+}
+.serviceTemp-5-wrap-right-body p:not(:first-child){
+  margin-top: 20px;
+}
+.serviceTemp-5-wrap-right-btn{
+  padding-top: 60px;
+}
 /* Service Master Template Page */
 
 
