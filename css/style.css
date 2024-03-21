@@ -1390,11 +1390,13 @@ button {
  position: absolute; 
  margin-bottom: 40px;
  left: 0;
+ right: 0;
 }
 .mm_text_top h3 {
   font-family: var(--pp);
   text-transform: uppercase;
   text-align: center;
+  margin: 0 auto;
 }
 .mm_text_top p {
   color: #555;
@@ -1402,6 +1404,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   max-width: 55ch;
+  margin: 0 auto;
 }
 .mm_btm {
   display: flex;
@@ -2010,6 +2013,10 @@ button {
 .services-we-offer{
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .services-we-offer-wrap{
   position: relative;
@@ -2518,6 +2525,101 @@ button {
   flex-direction: row-reverse;
 }
 /* Testimonials Page Ends */
+
+/* Service Master Template Page */
+.project_section.no-blog{
+  padding-bottom: 0px;
+}
+.our_moto_section.without-moto .mm_btm{
+  padding: 30px 0;
+}
+.our_moto_section.without-moto .mmbtm_text_btm p span{
+  border-bottom: none;
+  margin-right: 0px;
+  font-weight: 700;
+  color:rgb(251, 90, 13);
+}
+.our_moto_section.without-moto .mmbtml_text p{
+  color: rgb(85, 85, 85);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 13%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.services-we-offer.service-temp .services-we-offer-list{
+  padding-top: 37px;
+}
+.services-we-offer.service-temp .service-we-offer-list-cont-left{
+  max-width: 100%;
+}
+.services-we-offer.service-temp .service-we-offer-list-cont-body{
+  max-width: 59ch;
+  padding-top: 10px;
+}
+.services-we-offer.service-temp .services-we-offer-bg img{
+  filter: brightness(0.6);
+}
+.serviceTemp-wrap{
+  display: flex;
+  height: 100%;
+}
+.serviceTemp-left{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.serviceTemp-left-wrap{
+  max-width: 41ch;
+  margin: 0 auto;
+  padding-bottom: 10vh;
+}
+.serviceTemp-right{
+  width: 55%;
+}
+.serviceTemp-right img{
+  height: 100%;
+  width: 100%;
+}
+.serviceTemp-banner{
+  height: 100vh;
+}
+.serviceTemp-left-sub span{
+  color: rgb(255, 108, 38);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.serviceTemp-left-body p{
+  color: rgb(119, 119, 119);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.serviceTemp-2-left h3{
+  text-transform: uppercase;
+}
+.serviceTemp-2-right p{
+  color: rgb(85, 85, 85);
+}
+.serviceTemp-2-wrap{
+  display: flex;
+}
+.serviceTemp-2{
+  background: rgb(239, 234, 227);
+  padding: 144px 0;
+}
+.serviceTemp-2-right p:not(:first-child){
+  margin-top: 15px;
+}
+/* Service Master Template Page */
 
 
 /* footer start */
