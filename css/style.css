@@ -2750,7 +2750,274 @@ button {
 .serviceTemp-5-wrap-right-btn{
   padding-top: 60px;
 }
+.serviceTemp-6{
+  background-color: rgb(239, 234, 227);
+  padding: 100px 0;
+}
+.serviceTemp-6-wrap-left-head{
+  color: rgb(54, 25, 62);
+  font-family: var(--pp);
+  font-size: 63.32px;
+  font-weight: 900;
+  line-height: 63.98px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.serviceTemp-6-wrap-left-btn button{
+  background-color: transparent;
+}
+.serviceTemp-6-wrap-left-btn button span{
+  color: rgb(54, 25, 62);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 9px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.serviceTemp-6-wrap-right-content-head h3{
+  text-transform: uppercase;
+  color: rgb(83, 57, 90);
+}
+.serviceTemp-6-wrap{
+  display: flex;
+}
+.serviceTemp-6-wrap-right-content{
+  background-color: rgb(255, 255, 255);
+}
+.serviceTemp-6-wrap-right-content-wrap{
+  padding: 34px 43px;
+}
+.serviceTemp-6-wrap-right-content-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.serviceTemp-6-wrap-right-content-btn a{
+    color: rgb(255, 108, 38);
+    font-family: var(--bodyFont);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 0%;
+    letter-spacing: 10.5%;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(255, 108, 38);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.serviceTemp-6-wrap-left-btns{
+  padding-top: 93px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}    
+.serviceTemp-6-wrap-right-content-head{
+  padding-top: 40px;
+}
+.serviceTemp-6-wrap-right-content-body{
+  padding-top: 5px;
+}
+.serviceTemp-6-wrap-right-content-btn{
+  padding-top: 40px;
+}
+.serviceTemp-6-wrap-left{
+  width: 45%;
+}
+.serviceTemp-6-wrap-right{
+  width: 55%;
+}
+.serviceTemp-6-wrap-left-wrap{
+  padding-top: 66px;
+  max-width: 40ch;
+}
 /* Service Master Template Page */
+
+/* Sub Service Master Template Page */
+.subService-banner{
+  padding-top: 200px;
+}
+.subService-banner-head{
+  text-align: center;
+  padding: 0 20px;
+}
+.subService-banner-head h2{
+  text-transform: uppercase;
+}
+.subService-banner-img{
+  position: relative;
+  padding-top: 40%;
+}
+.subService-banner-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.subService-2{
+  background-color: rgb(239, 234, 227);
+  padding: 72px 0;
+}
+.subService-2-wrap{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.subService-2-wrap p{
+  color: rgb(85, 85, 85);
+}
+.subService-2-wrap p span{
+  font-weight: 700;
+  color: rgb(251, 90, 13);
+}
+.subService-2-left{
+  max-width: 49ch;
+}
+.subService-2-right{
+  max-width: 50ch;
+}
+.subService-3{
+  padding: 80px 0;
+}
+.subService-3-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subService-3-top-left h3{
+  text-transform: uppercase;
+}
+.subService-3-top-right{
+  max-width: 50ch;
+}
+.subService-3-top-right p{
+  color: rgb(85, 85, 85);
+}
+.subService-3-top-right p span{
+  color:rgb(251, 90, 13);
+  font-weight: 700;
+}
+.subService-3-top-left{
+  max-width: 50ch;
+}
+.subService-3 .serviceTemp-4-srat-right-body p{
+  color: rgb(85, 85, 85);
+}
+.subService-3 .serviceTemp-4-srat-right-head{
+  max-width: 35ch;
+}
+.subService-4-top-left h2{
+  text-transform: uppercase;
+}
+.subService-4-top-right p{
+  color: rgb(120, 120, 120);
+}
+.subService-4-top-right p:not(:first-child){
+  margin-top: 15px;
+}
+.subService-4-top-right p span{
+  color: rgb(251, 90, 13);
+  font-weight: 700;
+}
+.subService-4-top{
+  display: flex;
+  justify-content: space-between;
+}
+.subService-4-top-left{
+  max-width: 60ch;
+}
+.subService-4-top-right{
+  max-width: 42ch;
+}
+.subService-4-bottom{
+  padding-top: 55px;
+}
+.subService-4-bottom img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subService-4{
+  padding-top: 80px;
+}
+.subService-5{
+  background-color: rgb(239, 234, 227);
+}
+.subService-5-wrap{
+  display: flex;
+}
+.subService-5-wrap-left{
+  width: 50%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.subService-5-wrap-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.subService-5-wrap-left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subService-5-wrap-right-head h3{
+  text-transform: uppercase;
+}
+.subService-5-wrap-right-body{
+  padding-top: 33px;
+}
+.subService-5-wrap-right-body p{
+  color: rgb(85, 85, 85);
+}
+.subService-5-wrap-right-btn{
+  padding-top: 39px;
+}
+.subService-5-wrap-right-wrap{
+  max-width: 47ch;
+  padding-bottom: 15vh;
+}
+.subService-7-wrap-left{
+  color: rgb(54, 25, 62);
+  font-family: var(--pp);
+  font-size: 63.32px;
+  font-weight: 900;
+  line-height: 63.98px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  max-width: 22ch;
+}
+.subService-7-wrap-right p{
+  color: rgb(120, 120, 120);
+}
+.subService-7-wrap-right p span{
+  color: rgb(251, 90, 13);
+  font-weight: 700;
+}
+.subService-7-wrap-right{
+  max-width: 47ch;
+}
+.subService-7-wrap-right p:not(:first-child){
+  margin-top: 15px;
+}
+.subService-7-wrap-right a{
+  margin-top: 30px;
+}
+.subService-7-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.subService-7{
+  padding: 240px 0px;
+}
+/* Sub Service Master Template Page Ends  */
 
 
 /* footer start */
