@@ -891,7 +891,7 @@
                                 <h3>on page seo</h3>
                             </div>
                             <div class="serviceTemp-4-srat-right-body"> 
-                                <p> Google and other search engines want to make sure your page is relevant and accurately conveys what your business is about.</p>
+                                <p>Google and other search engines want to make sure your page is relevant and accurately conveys what your business is about.</p>
                                 <p>We'll optimise your on-page SEO, adding keywords, accurate meta descriptions, and the proper headers to help search engines recognise your page and <span>put it in front of the right people</span></p>
                             </div>
                         </div>
@@ -960,22 +960,22 @@
                         </div>
                         <div class="serviceTemp-6-wrap-left-btns">
                             <div class="serviceTemp-6-wrap-left-btn">
-                                <div class="serviceTemp-6-wrap-left-btn-progress"></div>
-                                <button>
+                                <button onClick="showContent(1)">
+                                    <div class="serviceTemp-6-wrap-left-btn-progress">
+                                        <div id="progress" class="serviceTemp-6-wrap-left-btn-progress-pro"></div>
+                                    </div>
                                     <span>01</span>
                                     <span>seo strategies</span>
                                 </button>
                             </div>
                             <div class="serviceTemp-6-wrap-left-btn">
-                                <div class="serviceTemp-6-wrap-left-btn-progress"></div>
-                                <button>
+                                <button onClick="showContent(2)">
                                     <span>02</span>
                                     <span>Video Production</span>
                                 </button>
                             </div>
                             <div class="serviceTemp-6-wrap-left-btn">
-                                <div class="serviceTemp-6-wrap-left-btn-progress"></div>
-                                <button>
+                                <button onClick="showContent(3)">
                                     <span>03</span>
                                     <span>content creation</span>
                                 </button>
@@ -990,7 +990,7 @@
                                 <img src="img/servceTemp10.png" alt="">
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-head">
-                                <h3>seo strategies</h3>
+                                <h3>seo strategies1</h3>
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-body">
                                 <p>Tell your brand's story through captivating visuals....Lorem ipsum dolor sit amet consectetur. Sit malesuada dui risus tellus tortor ultrices. Egestas pellentesque porttitor congue nec est nullam.</p>
@@ -1009,7 +1009,7 @@
                                 <img src="img/servceTemp10.png" alt="">
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-head">
-                                <h3>seo strategies</h3>
+                                <h3>seo strategies2</h3>
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-body">
                                 <p>Tell your brand's story through captivating visuals....Lorem ipsum dolor sit amet consectetur. Sit malesuada dui risus tellus tortor ultrices. Egestas pellentesque porttitor congue nec est nullam.</p>
@@ -1028,7 +1028,7 @@
                                 <img src="img/servceTemp10.png" alt="">
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-head">
-                                <h3>seo strategies</h3>
+                                <h3>seo strategies3</h3>
                             </div>
                             <div class="serviceTemp-6-wrap-right-content-body">
                                 <p>Tell your brand's story through captivating visuals....Lorem ipsum dolor sit amet consectetur. Sit malesuada dui risus tellus tortor ultrices. Egestas pellentesque porttitor congue nec est nullam.</p>
@@ -1662,6 +1662,8 @@
   
   <script>
   // Get all .cir_card elements
+  let mm = gsap.matchMedia(); 
+  mm.add("(min-width: 992px)", () => {  
 const cirCards = document.querySelectorAll('.client_section .cir_card');
 
 // Calculate the total width of all .cir_card elements
@@ -1681,6 +1683,7 @@ gsap.to('.c_inner', {
         markers: false
     }
 });
+  });
 
     $(".ps_main_carou.owl-carousel").owlCarousel({
       loop: true,
@@ -1702,6 +1705,12 @@ gsap.to('.c_inner', {
         },
       },
     });
+
+    new Splide('.ci_right.mob.splide', {
+                            arrows : true,
+                            perPage:1,
+                            pagination : false,
+                        }).mount();    
                 
     $(".video-vol-btns").click(function() {
                 if($(this).parent().siblings("video")[0].muted){
@@ -1762,6 +1771,48 @@ document.querySelectorAll('.services-we-offer-list li > a').forEach((element)=>{
                 element.parentNode.classList.add('active');
     });
 });
+
+// Automatic slide change interval in milliseconds
+const intervalTime = 8000;
+let currentIndex = 1; // Initial index of the displayed content
+
+// Function to automatically show the next content
+function autoChangeContent() {
+    // Reset progress bar
+    const progressBar = document.getElementById(`progress`);
+    progressBar.style.width = '0';
+
+    // Animate progress bar
+    let progress = 0;
+    const animationInterval = setInterval(function() {
+        progress += 1;
+        progressBar.style.width = `${progress}%`;8
+        if (progress >= 100) {
+            clearInterval(animationInterval);
+            showContent(currentIndex);
+            currentIndex = currentIndex % 3 + 1; // Loop through 1, 2, 3
+        }
+    }, intervalTime / 100); // Adjust interval for smooth animation
+}
+
+// Start automatic slide change
+autoChangeContent(); // Initial call to start immediately
+setInterval(autoChangeContent, intervalTime);
+
+
+        // Function to show content based on service number
+        function showContent(serviceNum) {
+            // Hide all content elements
+            document.querySelectorAll('.serviceTemp-6-wrap-right-content').forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // Show the selected content element
+            document.getElementById(`subService${serviceNum}`).style.display = 'block';
+
+            // Reset progress bar
+            // Start progress animation
+        }
     </script>
   </body>
   

@@ -13,6 +13,15 @@ ScrollSmoother.create({
    // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
 
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  if (window.scrollY > 0) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+});
+
 gsap.to(".cursor-wrap-svg img", { rotation: 540, duration: 3, repeat: -1, ease: "none" });
 const cursorRounded = document.querySelector('.cursor');
     const moveCursor = (e) => {

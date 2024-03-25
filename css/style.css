@@ -198,7 +198,7 @@ button{
   width: 0%;
   height: 100%;
   display: block;
-  background: #EFEAE3;
+  background: transparent;
   position: absolute;
   left: 0%;
   opacity: 0;
@@ -291,7 +291,7 @@ button {
 
 /* header start */
 .main_header {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   width: 100%;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -299,10 +299,19 @@ button {
 .main_header.black .header_logo a img{
   filter: invert(1);
 }
+.main_header.active .header_logo a img{
+  filter: invert(1);
+}
 .main_header.black .navbar_text p{
   color:  rgb(54, 25, 62);
 }
+.main_header.active .navbar_text p{
+  color:  rgb(54, 25, 62);
+}
 .main_header.black .navbar_icon img{
+  filter: invert(1);
+}
+.main_header.active .navbar_icon img{
   filter: invert(1);
 }
 .main_header.show {
@@ -720,6 +729,9 @@ button {
 .msm_left .item {
   position: absolute;
   z-index: 9;
+}
+.item.msmli2{
+  min-height: 475px;
 }
 .msm_left .item img{
   width: 100%;
@@ -1158,6 +1170,7 @@ button {
   font-size: 54px;
   font-style: normal;
   font-weight: 900;
+  line-height: 120%;
   text-transform: uppercase;
 }
 .oc_main {
@@ -1410,6 +1423,16 @@ button {
   display: flex;
   justify-content: space-between;
   padding-bottom: 70px;
+  position: relative;
+}
+.mm_btm::after {
+  content: "";
+  position: absolute;
+  top: -171px;
+  right: 40vw;
+  height: 171px;
+  width: 1px;
+  background-color: rgb(119, 119, 119);
 }
 .mmbtm_left {
   display: flex;
@@ -2094,7 +2117,7 @@ button {
   font-family: var(--pp);
   font-size: 48px;
   font-weight: 900;
-  line-height: 48.5px;
+  line-height: 120%;
   letter-spacing: 0%;
   text-align: left;
   text-transform: uppercase;
@@ -2574,17 +2597,21 @@ button {
 .serviceTemp-left-wrap{
   max-width: 41ch;
   margin: 0 auto;
+  padding: 0 20px;
   padding-bottom: 10vh;
 }
 .serviceTemp-right{
   width: 55%;
+  position: relative;
+  padding-top: 50%;
 }
 .serviceTemp-right img{
   height: 100%;
   width: 100%;
-}
-.serviceTemp-banner{
-  height: 100vh;
+  object-fit: cover;
+  object-position: left;
+  position: absolute;
+  inset: 0px;
 }
 .serviceTemp-left-sub span{
   color: rgb(255, 108, 38);
@@ -2611,6 +2638,7 @@ button {
 }
 .serviceTemp-2-wrap{
   display: flex;
+  gap: 50px;
 }
 .serviceTemp-2{
   background: rgb(239, 234, 227);
@@ -2707,6 +2735,7 @@ button {
 }
 .serviceTemp-4-srat-right{
   width: 50%;
+  padding: 0 40px;
 }
 .serviceTemp-4-srat-left img{
     width: 100%;
@@ -2766,6 +2795,10 @@ button {
 }
 .serviceTemp-6-wrap-left-btn button{
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px;
 }
 .serviceTemp-6-wrap-left-btn button span{
   color: rgb(54, 25, 62);
@@ -2785,6 +2818,28 @@ button {
 }
 .serviceTemp-6-wrap-right-content{
   background-color: rgb(255, 255, 255);
+  animation: tabEffect 1s;
+}
+.serviceTemp-6-wrap-left-btn-progress{
+  height: 2px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgb(54, 25, 62);
+  position: relative;
+}
+.serviceTemp-6-wrap-left-btn-progress-pro{
+  position: absolute;
+  inset: 0px;
+  width: 0%;
+  background-color: rgb(251, 90, 13);
+}
+@keyframes tabEffect {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .serviceTemp-6-wrap-right-content-wrap{
   padding: 34px 43px;
@@ -2813,7 +2868,7 @@ button {
   padding-top: 93px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 40px;
 }    
 .serviceTemp-6-wrap-right-content-head{
   padding-top: 40px;
@@ -3268,6 +3323,15 @@ button {
     gap: 50px;
     align-items: start;
   }
+  .serviceTemp-6-wrap-right-content-wrap{
+    padding: 30px;
+  }
+  .serviceTemp-6-wrap{
+    gap: 30px;
+  }
+  .serviceTemp-6-wrap-left-btns{
+    padding-top: 50px;
+  }
 }
 @media only screen and (max-width:1100px){
   .main-navbar-top{
@@ -3664,6 +3728,72 @@ button {
     width: 100%;
   }
   .tct2-r{
+    width: 100%;
+  }
+  .serviceTemp-wrap{
+    flex-direction: column;
+  }
+  .serviceTemp-left{
+    width: 100%;
+  }
+  .serviceTemp-right{
+    width: 100%;
+    padding-top: 100%;
+  }
+  .serviceTemp-left-wrap{
+    padding: 15vh 20px;
+    padding-bottom: 10vh;
+    text-align: center;
+  }
+  .serviceTemp-left-body p{
+    text-align: center;
+  }
+  .mmbtm_text_btm p{
+    text-align: center;
+  }
+  .serviceTemp-3-wrap{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .serviceTemp-3-left{
+    width: 100%;
+  }
+  .serviceTemp-3-right{
+    width: 100%;
+  }
+  .serviceTemp-4-srat{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .serviceTemp-4-srat-left{
+    width: 100%;
+  }
+  .serviceTemp-4-srat-right{
+    width: 100%;
+  }
+  .serviceTemp-4-srat.rev{
+    flex-direction: column;
+  }
+  .serviceTemp-5-wrap{
+    flex-direction: column;
+  }
+  .serviceTemp-5-wrap-left{
+    width: 100%;
+  }
+  .serviceTemp-5-wrap-right{
+    width: 100%;
+  }
+  .serviceTemp-5-wrap-right-body{
+    padding-top: 15px;
+  }
+  .serviceTemp-6-wrap{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .serviceTemp-6-wrap-left{
+    width: 100%;
+  }
+  .serviceTemp-6-wrap-right{
     width: 100%;
   }
 }
@@ -4139,6 +4269,33 @@ button {
   }
   .tct1-right{
     width: 100%;
+  }
+  .serviceTemp-left-wrap{
+    padding: 20vh 20px;
+    padding-bottom: 10vh;
+  }
+  .serviceTemp-2-wrap{
+    flex-direction: column;
+    text-align: center;
+  }
+  .serviceTemp-2{
+    padding: 100px 0;
+  }
+  .serviceTemp-4-srat-right{
+    padding: 0 20px;
+  }
+  .serviceTemp-4-srats{
+    padding-top: 100px;
+    gap: 100px;
+  }
+  .serviceTemp-6-wrap-left-wrap{
+    padding-top: 0px;
+  }
+  .navbar_text{
+    display: none;
+  }
+  .mm_btm::after{
+    display: none;
   }
 }
 
