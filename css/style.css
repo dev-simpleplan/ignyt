@@ -1849,6 +1849,9 @@ button {
 .fQcUw-left-question.active .fQcUw-left-question-head-text span{
   color: rgb(54, 25, 62);
 }
+.fQcUw-left-question.active{
+  border-bottom: 1px solid rgb(251, 90, 13);
+}
 .fQcUw-left-question-body p{
   color: rgb(54, 25, 62);
   font-family: var(--bodyFont);
@@ -1908,8 +1911,60 @@ button {
 .fQcUw-left-questions{
   padding-top: 55px;
 }
+.subService-8-wrap-bottom .fQcUw-left-questions{
+  padding-top: 88px;
+  width: 50%;
+}
+.subService-8-wrap-bottom .fQcUw-left-question{
+  padding: 8px 0;
+  position: relative;
+}
 .fQcUw-left-questions .fQcUw-left-question:not(:first-child){
   margin-top: 10px;
+}
+.fQcUw-left-question-float-head h4{
+  text-transform: uppercase;
+}
+.fQcUw-left-question-float-body{
+  padding-top: 20px;
+  max-width: 45ch;
+}
+.fQcUw-left-question-float-body p{
+  color: rgb(119, 119, 119);
+}
+.fQcUw-left-question-float-body p span{
+  font-weight: 700;
+  color: rgb(251, 90, 13);
+}
+.fQcUw-left-question-float{
+  position: absolute;
+  right: -100%;
+  border-left: 1px solid rgb(251, 90, 13);
+  border-bottom: 1px solid rgb(251, 90, 13);
+  top: 40px;
+  opacity: 0;
+  transition: .2s ease all;
+}
+.fQcUw-left-question.active .fQcUw-left-question-float{
+  opacity: 1;
+}
+.fQcUw-left-question-float-btn{
+  padding-top: 20px;
+}
+.fQcUw-left-question-float-wrap{
+  padding-bottom: 50px;
+  padding-right: 25px;
+  padding-left: 60px;
+  position: relative;
+}
+.fQcUw-left-question-float-wrap::after{
+  content: "";
+    position: absolute;
+    width: 121px;
+    top: 0;
+    left: -121px;
+    height: 1px;
+    background-color: rgb(251, 90, 13);
 }
 .fQcUw-right-head h2{
   color: rgb(255, 255, 255);
@@ -1978,6 +2033,9 @@ button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+.images-ticker{
+  padding-bottom: 70px;
 }
 /* About Page Ends */
 
@@ -3100,6 +3158,27 @@ button {
 }
 .subService-7{
   padding: 240px 0px;
+}
+.subService-8-wrap-top{
+  display: flex;
+  justify-content: space-between;
+}
+.subService-8-wrap-body p{
+  font-size: 14px;
+  color: rgb(85, 85, 85);
+}
+.subService-8-wrap-body p span{
+  font-weight: 700;
+  color: rgb(251, 90, 13);
+}
+.subService-8-wrap-head h3{
+  text-transform: uppercase;
+}
+.subService-8-wrap-body{
+  max-width: 46ch;
+}
+.subService-8-wrap-head{
+  max-width: 43ch;
 }
 /* Sub Service Master Template Page Ends  */
 

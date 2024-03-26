@@ -342,34 +342,29 @@
 
       <div class="spacer"></div>
 
-      <!-- Benefits You Get Section Starts -->
-      <section class="benefits-you-get animate-text">
-        <div class="">
-          <div class="benefits-you-get-wrap">
-            <div class="benefits-you-get-wrap-left">
-              <img src="img/benefits.png" alt="">
-            </div>
-            <div class="benefits-you-get-wrap-right">
-                <div class="benefits-you-get-head">
-                  <h2>what benefits you get</h2>
-                </div>
-                <div class="benefits-you-get-body">
-                  <p>Our powerful and productive strategies can move your business from the sidelines to the spotlight. Each service complements the others to effectively.</p>
-                </div>
-                <div class="benefits-you-get-ul">
-                  <ul>
-                    <li><h4>Reach & Engage your Target audience</h4></li>
-                    <li><h4>increased brand visibility</h4></li>
-                    <li><h4>drive business growth</h4></li>
-                  </ul>
-                </div>
-            </div>
+      <!-- Images Ticker Section Starts -->
+        <section class="images-ticker splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="img/tickerImg1.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="img/tickerImg2.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="img/tickerImg3.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="img/tickerImg4.png" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="img/tickerImg5.png" alt="" />
+              </li>
+            </ul>
           </div>
-        </div>
-      </section>
-      <!-- Benefits You Get Section Ends -->
-
-      <div class="spacer"></div>
+        </section>
+      <!-- Images Ticker Section Ends -->
 
       <!-- Why Do We Do Starts -->
       <section class="why-do-we-do">
@@ -1233,6 +1228,21 @@ mm.add("(min-width: 992px)", () => {
             }
     });
 });
+
+new Splide('.images-ticker.splide', {
+      type   : 'loop',
+      drag   : 'free',
+      focus  : 'center',
+      arrows : false,
+      gap: '40px',
+      autoWidth: true,
+      perPage: 5,
+      pagination : false,
+      autoScroll: {
+        speed: 2,
+        pauseOnHover: false,
+      },
+    }).mount( window.splide.Extensions );
     </script>
   </body>
   
