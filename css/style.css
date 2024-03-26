@@ -3008,6 +3008,7 @@ button {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 50px;
 }
 .subService-2-wrap p{
   color: rgb(85, 85, 85);
@@ -3068,6 +3069,7 @@ button {
 .subService-4-top{
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 .subService-4-top-left{
   max-width: 60ch;
@@ -3155,6 +3157,7 @@ button {
 .subService-7-wrap{
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 .subService-7{
   padding: 240px 0px;
@@ -3162,6 +3165,7 @@ button {
 .subService-8-wrap-top{
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 .subService-8-wrap-body p{
   font-size: 14px;
@@ -3904,6 +3908,46 @@ button {
   .serviceTemp-6-wrap-right{
     width: 100%;
   }
+  .subService-2-wrap{
+    flex-direction: column;
+    align-items: center;
+  }
+  .subService-3-top{
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .subService-4-top{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .subService-5-wrap{
+    flex-direction: column-reverse;
+  }
+  .subService-5-wrap-right-wrap{
+    padding-top: 15vh;
+    text-align: center;
+  }
+  .subService-5-wrap-left{
+    width: 100%;
+  }
+  .subService-5-wrap-right{
+    width: 100%;
+  }
+  .subService-8-wrap-top{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .subService-7-wrap{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .subService-7-wrap-left{
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width:767px){
@@ -4404,6 +4448,9 @@ button {
   }
   .mm_btm::after{
     display: none;
+  }
+  .subService-banner{
+    padding-top: 150px;
   }
 }
 

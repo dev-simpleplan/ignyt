@@ -2081,6 +2081,8 @@
   
   <script>
   // Get all .cir_card elements
+  let mm = gsap.matchMedia();
+mm.add("(min-width: 992px)", () => {
 const cirCards = document.querySelectorAll('.client_section .cir_card');
 
 // Calculate the total width of all .cir_card elements
@@ -2100,6 +2102,14 @@ gsap.to('.c_inner', {
         markers: false
     }
 });
+
+});
+
+new Splide('.ci_right.mob.splide', {
+                            arrows : true,
+                            perPage:1,
+                            pagination : false,
+                        }).mount();     
                 
     $(".video-vol-btns").click(function() {
                 if($(this).parent().siblings("video")[0].muted){
