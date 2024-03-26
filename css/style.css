@@ -1326,6 +1326,22 @@ button {
   /* min-width: 392px; */
   position: relative;
 }
+.psm_top-left {
+  position: absolute;
+  height: 85%;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.psm_top-right{
+  position: absolute;
+  height: 85%;
+  width: 50%;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
 .psmbtmi_top {
   background-color: #fff;
   padding: 19px 17px;
