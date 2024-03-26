@@ -612,6 +612,7 @@
       <div class="container-fluid">
         <div class="ps_main">
           <div class="psm_top animate-text">
+            <div class="psm_top-left"></div>
             <div class="psmt_para">
               <p>our projects</p>
             </div>
@@ -733,6 +734,7 @@
                 </div>
               </div>
           </div>
+          <div class="psm_top-right"></div>
           </div>
           <div class="psm_blog animate-text">
               <div class="psmbtm_heading">
@@ -1433,7 +1435,7 @@
   
   <script>
     //Services JS 
-    $(".ps_main_carou.owl-carousel").owlCarousel({
+    var owl = $(".ps_main_carou.owl-carousel").owlCarousel({
       loop: true,
       margin: 20,
       nav: false,
@@ -1522,6 +1524,40 @@ document.querySelectorAll('.services-we-offer-list li > a').forEach((element)=>{
                 element.parentNode.classList.add('active');
     });
 });  
+
+document.querySelectorAll('.psm_top-right').forEach((element)=>{
+        element.addEventListener('mouseover',()=>{
+          document.querySelector('.cursor-wrap-chev').style.opacity = "1";
+        })
+    })    
+document.querySelectorAll('.psm_top-right').forEach((element)=>{
+        element.addEventListener('mouseout',()=>{
+            document.querySelector('.cursor-wrap-chev').style.opacity = "0";
+        })
+    })
+    document.querySelectorAll('.psm_top-left').forEach((element)=>{
+        element.addEventListener('mouseover',()=>{
+          document.querySelector('.cursor-wrap-chev').style.opacity = "1";
+          document.querySelector('.cursor-wrap-chev').style.transform = "rotate(220deg)";
+        })
+    })    
+document.querySelectorAll('.psm_top-left').forEach((element)=>{
+        element.addEventListener('mouseout',()=>{
+            document.querySelector('.cursor-wrap-chev').style.opacity = "0";
+            document.querySelector('.cursor-wrap-chev').style.transform = "rotate(0deg)";
+        })
+    })     
+    var leftButton = document.querySelector('.psm_top-left');
+        var rightButton = document.querySelector('.psm_top-right');
+
+            // Add click event listeners
+            leftButton.addEventListener('click', function () {
+              owl.trigger('prev.owl.carousel');
+            });
+
+            rightButton.addEventListener('click', function () {
+              owl.trigger('next.owl.carousel');
+            });
     </script>
   </body>
   
