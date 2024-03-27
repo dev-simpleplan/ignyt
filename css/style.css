@@ -1740,6 +1740,17 @@ button {
 .about-banner-body{
   padding-top: 18px;
 }
+.our-work-banner .about-banner-body{
+  padding-top: 5px;
+}
+.our-work-banner .logos-track{
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+}
+.our-work-banner .logos-track .splide__slide img{
+  filter: brightness(0) invert(1);
+}
 .about-banner-body p{
   color: rgb(223, 223, 223);
   max-width: 46ch;
@@ -2399,7 +2410,7 @@ button {
   position: absolute;
   inset: 0px;
 }
-.splide-img-wrapper img{
+.splide-img-wrapper img, .splide-img-wrapper video{
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -3257,6 +3268,65 @@ button {
   max-width: 43ch;
 }
 /* Sub Service Master Template Page Ends  */
+
+/* Our Work CSS Starts */
+.featured-work{
+  background-color:#efeae3;
+  padding: 110px 0;
+}
+.featured-work-top h3{
+  text-transform: uppercase;
+  color: rgb(34, 14, 40);
+}
+.featured-work-filter-txt span{
+  color: rgb(34, 14, 40);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.featured-work-bottom-filter-txt{
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.featured-work-filters{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  scroll-snap-type: x mandatory;
+  gap: 7px;
+  padding-bottom: 10px;
+}
+.featured-work-filter{
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.featured-work-filter button{
+  padding: 5px 15px;
+  background: transparent;
+  display: inline-flex;
+  color: rgb(34, 34, 34);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.5px;
+  letter-spacing: 12%;
+  text-align: center;
+  transition: .2s ease all;
+}
+.featured-work-filter.active button{
+  color: rgb(255, 255, 255);
+  background: rgb(251, 90, 13);
+}
+.featured-work-bottom{
+  padding-top: 25px;
+}
+.ban-img-slide{
+  position: relative;
+}
+/* Our Work CSS Ends */
 
 
 /* footer start */
@@ -4394,7 +4464,7 @@ button {
     text-align: center;
   }
   .home-banner.mob{
-    height: 100vh;
+    height: 101vh;
     padding: 100px 0;
   }
   .home-banner-wrap{
