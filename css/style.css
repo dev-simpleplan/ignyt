@@ -287,6 +287,65 @@ button {
 }
 /* cursor ends */
 
+/* Loader Starts */
+.loader{
+  background: linear-gradient(136.04deg, rgb(53, 24, 61) 46.793%,rgb(146, 55, 127) 100.826%);
+  height: 101vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.8s cubic-bezier(0.82, 0, 0.36, 1),height 1.2s cubic-bezier(0.82, 0, 0.36, 1) 1s;
+}
+.loader.active{
+  height: 0vh;
+  transition: opacity 0.8s cubic-bezier(0.82, 0, 0.36, 1),height 1.2s cubic-bezier(0.82, 0, 0.36, 1) 0.2s 1s;
+}
+.loader .loader-svg-logo{
+  pointer-events: none;
+  transform: scale(1);
+  opacity: 1;
+  transition: 1.2s cubic-bezier(0.82, 0, 0.36, 1) .5s;
+}
+.loader.active .loader-svg-logo{
+  transform: scale(0);
+  opacity: 0;
+}
+.loader svg{
+  pointer-events: none;
+  transition: .5s cubic-bezier(0.82, 0, 0.36, 1);
+}
+.loader svg:nth-child(1){
+  max-width: 170px;
+}
+.loader svg:nth-child(2){
+  margin-left: -400px;
+  margin-bottom: -20px;
+  opacity: 0;
+  transition-delay: 2.5s;
+}
+.loader svg.active:nth-child(2){
+  margin-left: -25px;
+  opacity: 1;
+}
+.loader-svg-logo{
+  display: flex;
+  align-items: end;
+}
+.loader svg .maskingLoader{
+  clip-path: inset(100% 0 0% 0);
+  transition: 2s clip-path cubic-bezier(0.82, 0, 0.36, 1);
+}
+.loader svg.active .maskingLoader{
+  clip-path: inset(0% 0 0% 0);
+}
+/* Loader Ends */
+
 
 
 /* header start */
@@ -1118,7 +1177,6 @@ button {
 }
 
 .tmi2_text {
-  background: url("../img/Group\ 17211506.png");
   height: 100%;
   width: 100%;
   display: flex;
@@ -1746,6 +1804,13 @@ button {
   align-items: start;
   justify-content: space-between;
 }
+.what-do-we-do-top.rev{
+  flex-direction: row-reverse;
+  gap: 100px;
+}
+.what-do-we-do-top.rev .wdwd-top-left{
+  margin-right: auto;
+}
 .wdwd-top-left-body p{
   color: rgb(85, 85, 85);
 }
@@ -1768,8 +1833,15 @@ button {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding-top: 110px;
   gap: 80px;
+}
+.what-do-we-do-bottom.rev{
+  flex-direction: row-reverse;
+}
+.what-do-we-do-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
 }
 .wdwd-bottom-right-head h4{
   line-height: 120%;
@@ -3948,6 +4020,27 @@ button {
   .subService-7-wrap-left{
     text-align: center;
   }
+  .what-do-we-do-top.rev{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .what-do-we-do-bottom.rev{
+    flex-direction: column-reverse;
+  }
+  .loader svg:nth-child(1){
+    max-width: 100px;
+  }
+  .loader svg.active:nth-child(2) {
+    margin-left: 0px;
+    opacity: 1;
+}
+.loader svg:nth-child(2){
+  margin-bottom: 0px;
+  max-width: 210px;
+}
+.loader svg:nth-child(2){
+  margin-left: -250px;
+}
 }
 
 @media only screen and (max-width:767px){
@@ -4338,9 +4431,6 @@ button {
     flex-direction: column;
     gap: 50px;
   }
-  .what-do-we-do-bottom {
-    padding-top: 100px;
-  }
   .what-do-we-do{
     padding: 100px 0;
   }
@@ -4451,6 +4541,15 @@ button {
   }
   .subService-banner{
     padding-top: 150px;
+  }
+  .loader svg:nth-child(1){
+    max-width: 70px;
+  }
+  .loader svg:nth-child(2){
+    max-width: 170px;
+  }
+  .loader svg:nth-child(2){
+    margin-left: -50vw;
   }
 }
 

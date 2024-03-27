@@ -13,6 +13,14 @@ ScrollSmoother.create({
    // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
 
+setTimeout(function() {
+  $('.loader').addClass('active');
+    $('body').removeClass('stay');
+}, 4000);
+setTimeout(function() {
+  $('.loader svg').addClass('active');
+}, 1000);
+
 window.addEventListener('scroll', function() {
   var header = document.querySelector('header');
   if (window.scrollY > 0) {
