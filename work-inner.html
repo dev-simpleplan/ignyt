@@ -263,7 +263,118 @@
 
     <div class="body_wrapper">
 
-        
+        <!-- Work Inner Banner Starts -->
+        <section class="workInner-banner">
+            <div class="workInner-banner-wrap">
+                <div class="workInner-banner-head">
+                    <h2>zenith technologies</h2>
+                </div>
+            </div>
+            <div class="workInner-banner-video desk">
+                <video src="https://stagingdevspace.in/pja/wp-content/uploads/2024/02/23_TAK_19_Fall-Video-Refresh_15sec-1.mp4" loop autoplay="false" muted playsinline></video>
+            </div>
+            <div class="workInner-banner-video mob">
+                <video src="https://stagingdevspace.in/pja/wp-content/uploads/2024/02/23_TAK_19_Fall-Video-Refresh_15sec-1.mp4" loop autoplay="false" muted playsinline></video>
+            </div>
+            <div class="workInner-banner-video-btn">
+                <img src="img/play2Btn.svg" alt="">
+             </div>
+        </section>
+        <!-- Work Inner Banner Ends -->
+
+        <!-- Work Inner Second Section Starts -->
+        <section class="workInner-2">
+            <div class="container">
+                <div class="workInner-2-wrap animate-text">
+                    <div class="workInner-2-head">
+                        <p>Outcomes</p>
+                    </div>
+                    <div class="workInner-2-stats">
+                        <div class="workInner-2-stats-wrap">
+                            <div class="workInner-2-stat">
+                                <div class="workInner-2-stat-head">
+                                    50+
+                                </div>
+                                <div class="workInner-2-stat-body">
+                                    Campaign executed
+                                </div>
+                            </div>
+                            <div class="workInner-2-stat">
+                                <div class="workInner-2-stat-head">
+                                    100+
+                                </div>
+                                <div class="workInner-2-stat-body">
+                                    brand serviced
+                                </div>
+                            </div>
+                            <div class="workInner-2-stat">
+                                <div class="workInner-2-stat-head">
+                                    64%
+                                </div>
+                                <div class="workInner-2-stat-body">
+                                    average revenue 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Work Inner Second Section Ends -->
+
+        <!-- Work Inner Third Section Starts -->
+            <section class="workInner-3">
+                <div class="workInner-3-wrap animate-text">
+                    <div class="workInner-3-left">
+                        <div class="workInner-3-left-wrap">
+                            <div class="workInner-3-left-sub">
+                                In the journey of zenith technologies
+                            </div>
+                            <div class="workInner-3-left-head">
+                                ignyt works with the expert
+                            </div>
+                            <div class="workInner-3-left-body">
+                                <p>Our distinctive video production approach is a strategic blend of creativity and effective SEO techniques. Every corporate video, retail ad, animation and motion graphic we create is optimised for search rankings. </p>
+                                <p>Our commitment to SEO, combined with our state-of-the-art video production methods, ensures your content reaches the right audience, driving potential customers to your business.</p>
+                                <p>Are you ready to take your business to the next level and fan the flames of success?</p>
+                                <p><span>Light up your brand with Ignyt.</span></p>
+                            </div>
+                            <div class="workInner-3-left-btn">
+                                <a href="javascript:void(0)" class="custom_btn">
+                                    get in touch
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workInner-3-right">
+                        <div class="workInner-3-right-content">
+                            <div class="workInner-3-right-content-wrap">
+                                <div class="workInner-3-right-content-head">
+                                    couldn't have asked for better designs
+                                </div>
+                                <div class="workInner-3-right-content-body">
+                                    <p>"Working with IGNYT has been a game-changer for my business. Their expertise and guidance have helped us navigate complex challenges and make informed decisions. The team's dedication and commitment to our success are truly commendable. I'm excited to continue this partnership."</p>
+                                </div>
+                                <div class="workInner-3-right-content-author">
+                                    <span>chris england</span>
+                                    <span>VP, Customer Experience, Company Abc</span>
+                                </div> 
+                                <div class="workInner-3-right-content-img">
+                                    <img src="img/image 71.svg" alt="">
+                                </div>
+                                <div class="workInner-3-right-content-quotes">
+                                    <img src="img/“.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workInner-3-right-img">
+                            <img src="img/workInner2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Work Inner Third Section Ends -->
+
 
         <!-- FAQs/Contact Us Starts -->
         <section class="faq-contactUs">
@@ -837,92 +948,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   <script>  
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide('.logos-track.splide', {
-        type   : 'loop',
-        drag   : 'free',
-        focus  : 'center',
-        arrows : false,
-        autoWidth: true,
-        perPage: 8,
-        pagination : false,
-        autoScroll: {
-            speed: 1,
-            pauseOnHover: false,
-        },
-        }).mount( window.splide.Extensions );
-});
-
-document.querySelectorAll('.featured-works a').forEach((element)=>{
-        element.addEventListener('mouseover',()=>{
-          document.querySelector('.cursor-wrap-chev').style.opacity = "1";
-          document.querySelector('.cursor-wrap-chev').style.transform = "rotate(29deg)";
-        })
-    })    
-document.querySelectorAll('.featured-works a').forEach((element)=>{
-        element.addEventListener('mouseout',()=>{
-            document.querySelector('.cursor-wrap-chev').style.opacity = "0";
-        })
+  $('.workInner-banner-video video').trigger('pause');
+    $('.workInner-banner-video-btn').on('click', ()=>{
+            $('.workInner-banner-video video').trigger('play');
+            $('.workInner-banner-video-btn').addClass('active');
     })
-    var owl3 =  $(".featured-works.owl-carousel").owlCarousel({
-      loop: true,
-      margin: 40,
-      touchDrag  : true,
-      mouseDrag  : true,
-      nav: false,
-      autoplay:true,
-      items:1,
-      stagePadding:40,
-      autoplayTimeout:4000,
-    });    
-    function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("featured-works-tab");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("featured-work-filter");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-function openCity2(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("featured-works-tab");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("featured-work-filter");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-}
-document.getElementById("click1").click();
-
-let mm = gsap.matchMedia();
-mm.add("(max-width: 767px)", () => {
-    $('#click2').click();
-    $('.featured-work-filter-txt').click((e)=>{
-        $('.featured-work-filter-txt').toggleClass("active");
-        $('.featured-work-filters').toggleClass("active");
-    })
+    document.querySelectorAll('.fQcUw-left-question .fQcUw-left-question-head').forEach((element) => {
+    element.addEventListener("click", () => {
+        console.log("Cicked")
+            var isActive = element.parentNode.classList.contains('active');
+            if (!isActive){
+                document.querySelectorAll('.fQcUw-left-question').forEach((e)=>{
+                    e.classList.remove('active');
+                });
+                element.parentNode.classList.add('active');
+                }
+            else{
+                document.querySelectorAll('.fQcUw-left-question').forEach((e)=>{
+                    e.classList.remove('active');
+                });
+                element.parentNode.classList.remove('active');
+            }
+    });
 });
     </script>
   </body>
