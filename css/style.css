@@ -168,6 +168,7 @@ button{
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
   height: fit-content;
 }
 .custom_btn:hover {
