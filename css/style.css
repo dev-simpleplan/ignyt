@@ -1475,6 +1475,9 @@ button {
 .our_moto_section.with-mission .mm_text_bottom{
   flex-direction: column;
 }
+.our_moto_section.without-moto .mm_btm::after{
+  display: none;
+}
 .our_moto_section.with-mission .mm_text_bottom p:nth-child(2){
   display: none;
 }
@@ -2310,6 +2313,7 @@ button {
 .service-we-offer-list-cont-right{
   display: flex;
   flex-wrap: wrap;
+  row-gap: 15px;
 }
 .service-we-offer-list-cont-body p{
   color: rgb(255, 255, 255);
@@ -2322,10 +2326,12 @@ button {
 .service-we-offer-list-cont-wrap{
   display: flex;
   gap: 120px;
+  align-items: center;
 }
 .service-we-offer-list-cont{
   padding: 40px 52px;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   background: rgba(255, 255, 255, 0.1);
   -webkit-clip-path: inset(100% 0 0 0);
   clip-path: inset(100% 0 0 0);
@@ -3773,6 +3779,184 @@ button {
   max-width: 30ch;
 }
 /* Case Studies CSS Ends */
+
+/* Blog Inner CSS Starts */
+.blog-inner-component{
+  padding-top: 200px;
+  padding-bottom: 80px;
+}
+.bihc-wrap{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.bihc-head-top span{
+  color: rgb(114, 88, 121);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.bihc-head-bottom h2{
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.bihc-appreciate{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bihc-text{
+  color: rgb(85, 85, 85);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.bihc-number{
+  color: rgb(85, 85, 85);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.5px;
+  letter-spacing: 12.5%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.bihc-head-bottom{
+  padding-top: 20px;
+  max-width: 97ch;
+}
+.blog-inner-heading-component{
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.blog-inner-img-component{
+  margin-top: 55px;
+  position: relative;
+  padding-top: 30%;
+}
+.blog-inner-img-component img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.blog-inner-content-top-right-body{
+  padding-top: 50px;
+}
+.blog-inner-content-top-right-body p{
+  color: rgb(111, 111, 111);
+}
+.blog-inner-content-top-right-body p:not(:first-child){
+  padding-top: 20px;
+}
+.blog-inner-content-top-right-head h1{
+  color: rgb(54, 25, 62);
+  font-family: var(--pp);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48.5px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.blog-inner-content-component{
+  padding-top: 80px;
+}
+.blog-inner-content-author-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.blog-inner-content-author-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-inner-content-author-deets{
+  padding-top: 20px;
+}
+.blog-inner-content-author-name{
+  color: rgb(251, 90, 13);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.blog-inner-content-author-desig{
+  color: rgb(119, 119, 119);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.5px;
+  letter-spacing: 12%;
+  text-align: left;
+  padding-top: 10px;
+  max-width: 11ch;
+}
+.blog-inner-content-share{
+  padding-top: 24px;
+}
+.blog-inner-content-share-link a{
+  display: inline-flex;
+}
+.blog-inner-content-share{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.blog-inner-content-top{
+  display: flex;
+  align-items: start;
+  gap:130px;
+}
+.blog-inner-content-top-right{
+  max-width: 67ch;
+  margin-right: auto;
+}
+.blog-inner-content-top-right-head{
+  max-width: 47ch;
+}
+.blog-inner-content-middle{
+  position: relative;
+  padding-top: 30%;
+  margin-top: 90px;
+}
+.blog-inner-content-middle img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.blog-inner-content-bottom-head h2{
+  color: rgb(54, 25, 62);
+  font-family: var(--pp);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 32px;
+  letter-spacing: 2%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.blog-inner-content-bottom{
+  margin-top: 90px;
+}
+.blog-inner-content-bottom-wrap{
+  max-width: 67ch;
+  margin:0 auto;
+}
+.project_section.no-projects.similar-blogs{
+  background: transparent;
+}
+/* Blog Inner CSS Ends */
 
 /* footer start */
 .animate-text{
