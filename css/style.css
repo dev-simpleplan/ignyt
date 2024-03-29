@@ -964,6 +964,7 @@ button {
   /* border: 1px solid #36193e; */
   width: 100%;
   position: relative;
+  scroll-snap-type: x mandatory;
 }
 .c_inner .line1 {
   height: 100%;
@@ -973,7 +974,7 @@ button {
   top: -310px;
 }
 .ci_left {
-  width: 35%;
+  width: 30%;
   height: 100%;
   /* border: 1px solid yellowgreen; */
   position: relative;
@@ -981,6 +982,8 @@ button {
   left: -20px;
   display: flex;
   align-items: flex-end;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 .cil_main {
   /* border: 1px solid red; */
@@ -992,7 +995,9 @@ button {
   /* border: 1px solid red; */
   position: relative;
   /* top: 0; */
-  width: 65%;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 .ci_right.mob{
   display: none;

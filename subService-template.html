@@ -2142,17 +2142,16 @@
   <script>
   // Get all .cir_card elements
   let mm = gsap.matchMedia();
-mm.add("(min-width: 992px)", () => {
-const cirCards = document.querySelectorAll('.client_section .cir_card');
-
-// Calculate the total width of all .cir_card elements
-let totalWidth = 0;
-cirCards.forEach(card => {
-    totalWidth += card.offsetWidth;
-});
+mm.add("(min-width: 992px)", () => {    
+var k = -0.00000055;
+var c = 1179;
+var screenWidth = screen.width;
+var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
+var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
+var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
 // GSAP animation with dynamic xPercent value
 gsap.to('.c_inner', {
-    x: -(totalWidth - 540),
+    x: -(formula),
     scrollTrigger: {
         trigger: '.client_section',
         pin: true,
