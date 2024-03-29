@@ -168,7 +168,6 @@ button{
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  z-index: 10;
   height: fit-content;
 }
 .custom_btn:hover {
@@ -2810,11 +2809,18 @@ button {
 .serviceTemp-2-left h3{
   text-transform: uppercase;
 }
+.serviceTemp-2-left{
+  max-width: 54ch;
+}
+.serviceTemp-2-right{
+  max-width: 50ch;
+}
 .serviceTemp-2-right p{
   color: rgb(85, 85, 85);
 }
 .serviceTemp-2-wrap{
   display: flex;
+  justify-content: space-between;
   gap: 50px;
 }
 .serviceTemp-2{
