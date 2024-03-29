@@ -5481,6 +5481,27 @@ button {
 }
 }
 
+@media only screen and (max-width:375px){
+  .home-banner-text .home-banner-img.one{
+    width: 42vw;
+  }
+  .home-banner-text .home-banner-img.video{
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width:350px){
+  .home-banner-text .home-banner-img.one{
+    width: 36vw;
+  }
+  .home-banner-text .home-banner-img{
+    width: 16vw;
+  }
+  .home-banner-text .home-banner-img.video{
+    width: 39vw;
+  }
+}
+
 .modal-video {
   position: relative;
   padding-top: 60%;
