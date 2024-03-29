@@ -776,6 +776,9 @@ button {
   background-color: #efeae3;
   overflow: hidden;
 }
+.mark-client-sections{
+  background: #efeae3;
+}
 .ms_main {
   height: 100vh;
   width: 100%;
