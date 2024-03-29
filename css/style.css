@@ -5473,6 +5473,12 @@ button {
 .msm_left .item{
   min-height: auto;
 }
+.logos-track.index{
+  display: none;
+}
+.omb_btn.trans{
+  text-align: center;
+}
 }
 
 .modal-video {
