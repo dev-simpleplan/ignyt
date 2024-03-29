@@ -1,6 +1,7 @@
 // cursor script
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
+if(!document.querySelector('.applyScrollSmootherToThisPage')){
+  
 ScrollSmoother.create({
   smooth: 1,
   smoothTouch:0,
@@ -12,6 +13,7 @@ ScrollSmoother.create({
   }
    // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
+}
 
 setTimeout(function() {
   $('.loader').addClass('active');

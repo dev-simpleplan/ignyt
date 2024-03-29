@@ -255,7 +255,7 @@
       </div>
     </div>
 
-    <body class="stay">
+    <body class="stay applyScrollSmootherToThisPage">
     <!-- body wrapper start -->
 
     <div id="smooth-wrapper">
@@ -272,7 +272,7 @@
                                     <span>October 2023</span>
                                 </div>
                                 <div class="bihc-head-bottom">
-                                    <h2>Packaging design matters, but to unlock its true value.</h2>
+                                    <h2>Packaging design matters, but to<br> unlock its true value.</h2>
                                 </div>
                             </div>
                             <div class="bihc-appreciate">
@@ -897,6 +897,20 @@ $(".psmbtm_card_mobile_carou.owl-carousel").owlCarousel({
           document.querySelector('.cursor-wrap-svg').style.opacity = "0";
         })
     })
+    let mm = gsap.matchMedia();
+mm.add("(min-width: 992px)", () => {
+    gsap.to('.bihc-head-bottom h2',{
+        fontSize:'3.8vw',
+        scrollTrigger:{
+            trigger:'.blog-inner-component',
+            pin:false,
+            start: "top top",
+            end: "+=400",
+            markers:false,
+            scrub:2
+        }
+    })
+})
 
     </script>
   </body>
