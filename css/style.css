@@ -351,6 +351,7 @@ button {
 /* header start */
 .main_header {
   position: fixed;
+  top: 0;
   z-index: 9;
   width: 100%;
   transition: 0.3s ease all;
@@ -3987,6 +3988,204 @@ button {
 }
 /* Blog Inner CSS Ends */
 
+/* Case Studies Inner Starts */
+.csc-featured-img{
+  position: relative;
+  padding-top: 35%;
+}
+.csc-featured-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.case-studies-content{
+  padding-top:100px;
+  padding-bottom: 100px;
+}
+.csc-bottom-content{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+}
+.csc-bottom-content-right p{
+  color: rgb(111, 111, 111);
+}
+.csc-bottom-content-right{
+  max-width: 56ch;
+}
+.csc-bottom-content-right p:not(:first-child){
+  padding-top: 23px;
+}
+.csc-bottom{
+  padding-top: 100px;
+}
+.csc-bottom-content-left h3, .csc-bottom-content-left h5{
+  text-transform: uppercase;
+}
+.csc-bottom-content-author{
+  color: rgb(251, 90, 13);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.5px;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+.csc-bottom-content-date{
+  color: rgb(114, 88, 121);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.csc-bottom-content-left{
+  max-width: 40ch;
+  position: sticky;
+  top: 100px;
+}
+.csc-bottom-content-img{
+  position: relative;
+  padding-top: 35%;
+}
+.csc-bottom-content-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+}
+.case-space{
+  height: 90px;
+}
+.csc-share-box{
+  background-color: rgb(249, 249, 249);
+  position: sticky;
+  bottom: 100px;
+  max-width: 820px;
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.2);
+  opacity: 0;
+}
+.csc-share-box-wrap{
+  padding: 12px 40px;
+}
+.csc-share-box-txt{
+  color: rgb(85, 85, 85);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.5px;
+  letter-spacing: 12.5%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.csc-share-box-number{
+  color: rgb(251, 90, 13);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.5px;
+  letter-spacing: 12.5%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.csc-share-box-left, .csc-share-box-right{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.csc-share-box-socials{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.csc-share-box-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.caseStudy-testimonial{
+  background-color: rgb(239, 234, 227);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+}
+.cSt-head h2{
+  color: rgb(53, 24, 61);
+  font-size: 50.89px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cSt-body p{
+  color: rgb(85, 85, 85);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.cSt-author{
+  display: flex;
+  flex-direction: column;
+}
+.cSt-img{
+  text-align: center;
+}
+.cSt-author span{
+  color: rgb(44, 40, 34);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 137.5%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.cSt-author span:first-child{
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cSt-img{
+  padding-top: 20px;
+}
+.cSt-author {
+  padding-top: 50px;
+}
+.cSt-body{
+  padding-top: 15px;
+  max-width: 65ch;
+  margin: 0 auto;
+}
+.cSt-wrap{
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto;
+  position: relative;
+}
+.cSt-quote{
+  max-width: 90px;
+  max-height: 83px;
+  position: absolute;
+  left: -100px;
+  top: -60px;
+}
+.cSt-quote img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Case Stuides Inner Ends */
+
 /* footer start */
 .animate-text{
   opacity: 0;
@@ -4254,6 +4453,14 @@ button {
   .workInner-3-left-head 
   {
     font-size: 40px;
+  }
+  .cSt-quote{
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .cSt-head h2 {
+    font-size: 42.89px;
   }
 }
 @media only screen and (max-width:1100px){
@@ -4868,6 +5075,21 @@ button {
 }
 .blog-inner-content-top-right-head h1{
   font-size: 40px;
+}
+.csc-bottom-content{
+  flex-direction: column;
+}
+.csc-bottom-content-left{
+  position: static;
+}
+.csc-bottom {
+  padding-top: 70px;
+}
+.csc-share-box{
+  position: static;
+}
+.csc-bottom-content-author{
+  padding-top: 30px;
 }
 }
 
@@ -5537,6 +5759,40 @@ button {
 }
 .blog-inner-content-top-right-head h1{
   font-size: 35px;
+}
+.caseStudy-testimonial {
+  padding: 100px 10px;
+  height: auto;
+}
+.cSt-head h2 {
+  font-size: 34.89px;
+}
+.case-space {
+  height: 60px;
+}
+.csc-share-box-wrap{
+  gap: 20px;
+  padding: 12px 20px;
+}
+.csc-share-box-txt{
+  font-size: 12px;
+}
+.csc-share-box-number{
+  font-size: 12px;
+}
+.csc-share-box-svg img{
+  height: 20px;
+  width: 20px;
+}
+.csc-share-box-left, .csc-share-box-right{
+  gap: 10px;
+}
+.csc-share-box-socials{
+  gap: 10px;
+}
+.csc-share-box-social img{
+  height: 16px;
+  width: 15px;
 }
 }
 
