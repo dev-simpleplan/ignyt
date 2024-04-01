@@ -5794,6 +5794,9 @@ button {
   height: 16px;
   width: 15px;
 }
+.csc-bottom-content {
+  gap: 20px;
+}
 }
 
 @media only screen and (max-width:375px){
