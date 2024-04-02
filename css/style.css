@@ -4299,6 +4299,17 @@ button {
 }
 /* Error Template CSS Ends */
 
+/* Policy Template CSS Starts */
+.policy-template{
+  padding:200px 20px 100px 20px;
+}
+.policy-container{
+  max-width: 672px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* Policy Template CSS Ends */
+
 /* footer start */
 .animate-text{
   opacity: 0;
