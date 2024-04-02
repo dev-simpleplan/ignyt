@@ -1651,8 +1651,9 @@
     //Home JS 
 document.addEventListener("DOMContentLoaded", (event) => {
         function setVideoHeight() {
-              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-right .home-banner-img').clientHeight;
-              document.querySelector('.home-banner.desk .home-banner-video').style.height = imgHeight + 'px';
+              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-left').clientHeight;
+              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = (imgHeight - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-video').style.height = (imgHeight - 10) + 'px';
           }
           setTimeout(function() {
             setVideoHeight();
@@ -1680,22 +1681,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-                        new Splide('.logos-track.splide', {
-                            type   : 'loop',
-                            drag   : 'free',
-                            focus  : 'center',
-                            arrows : false,
-                            autoWidth: true,
-                            perPage: 8,
-                            pagination : false,
-                            autoScroll: {
-                            speed: 1,
-                            pauseOnHover: false,
-                            },
-                        }).mount( window.splide.Extensions );
-                        });
+    new Splide('.logos-track.splide', {
+          type   : 'loop',
+          drag   : 'free',
+          focus  : 'center',
+          arrows : false,
+          autoWidth: true,
+          perPage: 8,
+          pagination : false,
+          autoScroll: {
+            speed: 1,
+            pauseOnHover: false,
+          },
+          }).mount( window.splide.Extensions );
+        });
 
-                        let mm = gsap.matchMedia();
+let mm = gsap.matchMedia();
 mm.add("(min-width: 992px)", () => {
   gsap.registerPlugin(ScrollTrigger)
   const heading = document.querySelector(".heading");
@@ -1755,24 +1756,54 @@ mm.add("(min-width: 992px)", () => {
   
   // mark section gsap ends
   // Get all .cir_card elements
+
+  let mm5 = gsap.matchMedia();
+mm.add("(min-width: 1501px)", () => { 
 // Calculate the total width of all .cir_card elements
-var k = -0.00000055;
-var c = 1179;
-var screenWidth = screen.width;
-var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
-var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
-var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
+  var k = -0.00000055;
+  var c = 1310;
+  var screenWidth = screen.width;
+  var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
+  var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
+  var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
 // GSAP animation with dynamic xPercent value
-gsap.to('.c_inner', {
-    x: -(formula),
-    scrollTrigger: {
-        trigger: '.client_section',
-        pin: true,
-        scrub: true,
-        start: "top top",
-        end: "400% bottom",
-        markers: false
-    }
+  gsap.to('.c_inner', {
+      x: -(formula),
+      scrollTrigger: {
+          trigger: '.client_section',
+          pin: true,
+          scrub: true,
+          start: "top top",
+          end: "400% bottom",
+          markers: false
+      }
+  });
+
+});
+
+
+let mm3 = gsap.matchMedia();
+mm.add("(max-width: 1500px)", () => { 
+// Calculate the total width of all .cir_card elements
+  var k = -0.00000055;
+  var c = 1179;
+  var screenWidth = screen.width;
+  var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
+  var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
+  var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
+// GSAP animation with dynamic xPercent value
+  gsap.to('.c_inner', {
+      x: -(formula),
+      scrollTrigger: {
+          trigger: '.client_section',
+          pin: true,
+          scrub: true,
+          start: "top top",
+          end: "400% bottom",
+          markers: false
+      }
+  });
+
 });
 
   

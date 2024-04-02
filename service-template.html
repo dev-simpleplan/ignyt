@@ -1726,23 +1726,53 @@
   // Get all .cir_card elements
   let mm = gsap.matchMedia(); 
   mm.add("(min-width: 992px)", () => {  
-var k = -0.00000055;
-var c = 1179;
-var screenWidth = screen.width;
-var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
-var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
-var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
+    let mm5 = gsap.matchMedia();
+mm.add("(min-width: 1501px)", () => { 
+// Calculate the total width of all .cir_card elements
+  var k = -0.00000055;
+  var c = 1310;
+  var screenWidth = screen.width;
+  var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
+  var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
+  var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
 // GSAP animation with dynamic xPercent value
-gsap.to('.c_inner', {
-    x: -(formula),
-    scrollTrigger: {
-        trigger: '.client_section',
-        pin: true,
-        scrub: true,
-        start: "top top",
-        end: "400% bottom",
-        markers: false
-    }
+  gsap.to('.c_inner', {
+      x: -(formula),
+      scrollTrigger: {
+          trigger: '.client_section',
+          pin: true,
+          scrub: true,
+          start: "top top",
+          end: "400% bottom",
+          markers: false
+      }
+  });
+
+});
+
+
+let mm3 = gsap.matchMedia();
+mm.add("(max-width: 1500px)", () => { 
+// Calculate the total width of all .cir_card elements
+  var k = -0.00000055;
+  var c = 1179;
+  var screenWidth = screen.width;
+  var rightCardsWidth = document.querySelector(".ci_left").offsetWidth;
+  var leftCardWidth = document.querySelector(".ci_right.desk").offsetWidth;
+  var formula = k*(screenWidth*rightCardsWidth*leftCardWidth) + c;
+// GSAP animation with dynamic xPercent value
+  gsap.to('.c_inner', {
+      x: -(formula),
+      scrollTrigger: {
+          trigger: '.client_section',
+          pin: true,
+          scrub: true,
+          start: "top top",
+          end: "400% bottom",
+          markers: false
+      }
+  });
+
 });
   });
 
