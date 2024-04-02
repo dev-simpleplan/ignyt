@@ -4259,6 +4259,7 @@ button {
 }
 .error-template-wrap{
   max-width: 55ch;
+  margin: 0 auto;
   text-align: center;
 }
 .error-body{
