@@ -30,7 +30,7 @@ body {
 @font-face {
   font-family: "PP Formula Compressed";
   src: url("../font/PPFormula-CondensedBlack.woff2") format("woff2"),
-    url("PPFormula-CondensedBlack.woff") format("woff");
+    url("../font/PPFormula-CondensedBlack.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -4308,6 +4308,46 @@ button {
   width: 100%;
   margin: 0 auto;
 }
+.policy-head h2{
+  text-transform: uppercase;
+  color: rgb(54, 25, 62);
+  font-size: 86px;
+}
+.policy-body h1{
+  color: rgb(54, 25, 62);
+  font-family: var(--pp);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48.5px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.policy-body h2{
+  color: rgb(54, 25, 62);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 32px;
+  letter-spacing: 2%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.policy-body-paras p{
+  font-size: 14px;
+  color:rgb(119, 119, 119);
+}
+.policy-body{
+  padding-top: 70px;
+}
+.policy-body-paras{
+  padding-top: 35px;
+}
+.policy-body-paras p:not(:first-child){
+  padding-top: 15px;
+}
+.policy-body h2:not(:first-child){
+  padding-top: 44px;
+}
 /* Policy Template CSS Ends */
 
 /* footer start */
@@ -5227,6 +5267,12 @@ button {
 .thank-you-template{
   height: 70vh;
 }
+.policy-template {
+  padding: 150px 20px 100px 20px;
+}
+.policy-head h2 {
+  font-size:76px;
+}
 }
 
 @media only screen and (max-width:767px){
@@ -5956,6 +6002,27 @@ button {
 }
 .tyt-text-img img {
   max-height: 37px;
+}
+.policy-template {
+  padding: 100px 20px 100px 20px;
+}
+.policy-head h2 {
+  font-size: 54px;
+}
+.policy-body h1{
+  font-size: 38px;
+}
+.policy-body {
+  padding-top: 40px;
+}
+.policy-body h2{
+  font-size: 24px;
+}
+.policy-body h2:not(:first-child) {
+  padding-top: 34px;
+}
+.policy-body-paras {
+  padding-top: 25px;
 }
 }
 
