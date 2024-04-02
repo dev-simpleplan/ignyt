@@ -4268,6 +4268,36 @@ button {
 .error-btn{
   padding-top: 70px;
 }
+.thank-you-template{
+  background-color: rgb(34, 14, 40);
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tyt-text-img{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.tyt-text-img img{
+  max-height: 109px;
+}
+.tyt-body p{
+  color: rgb(206, 193, 209);
+}
+.tyt-body{
+  max-width: 52ch;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+.tyt-btn{
+  text-align: center;
+  padding-top: 50px;
+}
 /* Error Template CSS Ends */
 
 /* footer start */
@@ -5178,6 +5208,15 @@ button {
 .faq-contactUs.contact-page .fQcUw-left-head{
   padding-top: 0px;
 }
+.tyt-text-img img {
+  max-height: 64px;
+}
+.tyt-text-img h1{
+  font-size: 77.5px;
+}
+.thank-you-template{
+  height: 70vh;
+}
 }
 
 @media only screen and (max-width:767px){
@@ -5898,6 +5937,15 @@ button {
 }
 .error-head span.grey {
   font-size: 129.24px;
+}
+.thank-you-template{
+  height: 101vh;
+}
+.tyt-text-img h1 {
+  font-size: 44.5px;
+}
+.tyt-text-img img {
+  max-height: 37px;
 }
 }
 
