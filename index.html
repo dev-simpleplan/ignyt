@@ -1654,29 +1654,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
               var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-left').clientHeight;
               document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = (imgHeight - 10) + 'px';
               document.querySelector('.home-banner.desk .home-banner-video').style.height = (imgHeight - 10) + 'px';
+              gsap.registerPlugin(ScrollTrigger);
+              gsap.to('.home-banner-video',{
+                height:'100vh',
+                width:'100vw',
+                right:0,
+                scrollTrigger:{
+                  pin:true,
+                  trigger:'.home-banner',
+                  scrub:2,
+                  start:"top top",
+                  end: "200% bottom",
+                  onLeave: ()=>{
+                    document.querySelector('.home-banner-video video').play();
+                  },
+                  markers:false
+                }
+
+              })
           }
           setTimeout(function() {
             setVideoHeight();
           }, 5000);   
-      window.addEventListener('resize', setVideoHeight);  
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to('.home-banner-video',{
-        height:'100vh',
-        width:'100vw',
-        right:0,
-        scrollTrigger:{
-          pin:true,
-          trigger:'.home-banner',
-          scrub:2,
-          start:"top top",
-          end: "200% bottom",
-          onLeave: ()=>{
-            document.querySelector('.home-banner-video video').play();
-          },
-          markers:false
-        }
-
-      })
+      window.addEventListener('resize', setVideoHeight);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
