@@ -23,7 +23,7 @@ html {
   --baseFont: 16px;
   --ignytorange: #ff5722;
   --paracolor: #555;
-  --pp: "PP Formula Compressed";
+  --pp: "PP Formula Compressed", sans-serif;
 }
 html,
 body {
