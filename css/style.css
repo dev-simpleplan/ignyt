@@ -4705,6 +4705,13 @@ button {
   .cSt-head h2 {
     font-size: 42.89px;
   }
+  .home-banner-text span{
+    font-size: clamp(84px, 8vw, 230px);
+    line-height: 100%;
+  }
+  .home-banner-wrap{
+    gap: 0px;
+  }
 }
 @media only screen and (max-width:1100px){
   .main-navbar-top{

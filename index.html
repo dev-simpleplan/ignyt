@@ -1653,12 +1653,12 @@
 document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger);
         function setVideoHeight() {
-              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-left').clientHeight;
-              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = (imgHeight - 10) + 'px';
-              document.querySelector('.home-banner.desk .home-banner-video').style.height = (imgHeight - 10) + 'px';
+              var imgHeight = document.querySelector('.home-banner.desk .home-banner-img.two-desk').clientHeight;
+              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = ((imgHeight*2)+ 60 - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-video').style.height = ((imgHeight*2)+ 60 - 10) + 'px';
           }
             setVideoHeight();
-            
+
             gsap.to('.home-banner-video',{
                 height:'100vh',
                 width:'100vw',
