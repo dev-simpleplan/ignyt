@@ -64,7 +64,7 @@ document.querySelector('.navbar_main').addEventListener("click", ()=>{
       onComplete: function() {
                       document.querySelector('.main-navbar').classList.add('active');
                   }
-   },"=-0.6");
+   },"=-0.8");
    t.to('.main-navbar-top-left img',{
     opacity:1
    })
@@ -72,7 +72,7 @@ document.querySelector('.navbar_main').addEventListener("click", ()=>{
      y:0,
      duration:.5,
     
-   },"=-0.6")
+   },"=-0.8")
    t.to(".main-navbar-top-right",{
      opacity:1,
      duration:.6,
@@ -239,20 +239,11 @@ spanR.forEach((target) => {
   });
 });  
 
-// // Get the center coordinates of the window
-// const centerX = window.innerWidth / 2;
-// const centerY = window.innerHeight / 2;
-
-// // Set the initial position of the cursor to the center
-// $(".ring").css(
-//   "transform",
-//   `translateX(calc(${centerX}px - 1.25rem)) translateY(calc(${centerY}px - 1.25rem))`
-// );
-
-// // Update the cursor position on mousemove
-// $(window).mousemove(function (e) {
-//   $(".ring").css(
-//     "transform",
-//     `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
-//   );
-// });
+document.querySelectorAll('a, button').forEach((e)=>{
+    e.addEventListener("mouseover", ()=>{
+      document.querySelector('.cursor .cursor-wrap').classList.add('active');
+    })
+    e.addEventListener("mouseout", ()=>{
+      document.querySelector('.cursor .cursor-wrap').classList.remove('active');
+    })
+})

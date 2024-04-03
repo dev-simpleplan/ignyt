@@ -246,11 +246,22 @@ button {
 .cursor .cursor-wrap {
   position: absolute;
   display: grid;
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background-color:rgb(255, 108, 38);
   place-items: center;
+  transition: all .4s;
+}
+.cursor .cursor-wrap.active{
+  transform: scale(1.5);
+}
+.cursor .cursor-wrap img:nth-child(1){
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.cursor .cursor-wrap img:nth-child(2){
+  position: absolute;
 }
 .cursor-wrap-svg img{
   height: 100%;
@@ -554,6 +565,7 @@ button {
   align-items: center;
   cursor: none;
   opacity: 1;
+  padding: 10px 0;
 }
 .navbar_main .navbar_icon{
   display: flex;
@@ -6166,9 +6178,11 @@ button {
 }
 .video-cross{
   position: absolute;
-  right: 45px;
-  top: 25px;
+  right: 35px;
+  top: 15px;
   z-index: 2;
+  padding: 10px;
+  display: flex;
 }
 .video-controls{
   display: flex;

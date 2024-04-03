@@ -244,7 +244,10 @@
     </header>
 
     <div class="cursor">
-      <div class="cursor-wrap"></div>
+      <div class="cursor-wrap">
+        <img class="cursorWrap-back" src="img/cursorBack.png" alt="">
+        <img class="cursorWrap-front" src="img/cursorFront.png" alt="">
+      </div>
       <div class="cursor-wrap-svg">
         <img src="img/svgCursor.png" alt="">
       </div>
@@ -1654,8 +1657,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger);
         function setVideoHeight() {
               var imgHeight = document.querySelector('.home-banner.desk .home-banner-img.two-desk').clientHeight;
-              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = ((imgHeight*2)+ 40 - 10) + 'px';
-              document.querySelector('.home-banner.desk .home-banner-video').style.height = ((imgHeight*2)+ 40 - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = ((imgHeight*2)+ 50 - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-video').style.height = ((imgHeight*2)+ 50 - 10) + 'px';
               ScrollTrigger.refresh();
           }
             setVideoHeight();
