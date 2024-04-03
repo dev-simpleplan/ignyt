@@ -863,6 +863,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: var(--pp);
 }
 .home-banner.mob{
   display: none;
