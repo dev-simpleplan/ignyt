@@ -1654,8 +1654,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger);
         function setVideoHeight() {
               var imgHeight = document.querySelector('.home-banner.desk .home-banner-img.two-desk').clientHeight;
-              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = ((imgHeight*2)+ 60 - 10) + 'px';
-              document.querySelector('.home-banner.desk .home-banner-video').style.height = ((imgHeight*2)+ 60 - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = ((imgHeight*2)+ 40 - 10) + 'px';
+              document.querySelector('.home-banner.desk .home-banner-video').style.height = ((imgHeight*2)+ 40 - 10) + 'px';
+              ScrollTrigger.refresh();
           }
             setVideoHeight();
 
