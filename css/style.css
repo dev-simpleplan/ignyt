@@ -939,6 +939,7 @@ button {
 .home-banner-wrap-right{
   width: 12.5%;
   overflow: hidden;
+  max-height: 310px;
 }
 .home-banner-wrap-right .home-banner-img{
   height: 100%;

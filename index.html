@@ -1652,9 +1652,8 @@
     //Home JS 
 document.addEventListener("DOMContentLoaded", (event) => {
         function setVideoHeight() {
-              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-left').clientHeight;
-              document.querySelector('.home-banner.desk .home-banner-wrap-right').style.maxHeight = (imgHeight - 10) + 'px';
-              document.querySelector('.home-banner.desk .home-banner-video').style.height = (imgHeight - 10) + 'px';
+              var imgHeight = document.querySelector('.home-banner.desk .home-banner-wrap-right').clientHeight;
+              document.querySelector('.home-banner.desk .home-banner-video').style.height =imgHeight + 'px';
               gsap.registerPlugin(ScrollTrigger);
               gsap.to('.home-banner-video',{
                 height:'100vh',
