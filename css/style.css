@@ -3,6 +3,14 @@
 General CSS
 ========================================== 
 */
+@font-face {
+  font-family: "PP Formula Compressed";
+  src: url("../font/PPFormula-CondensedBlack.woff2") format("woff2"),
+    url("../font/PPFormula-CondensedBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
   cursor: none !important;
@@ -25,15 +33,6 @@ body {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "PP Formula Compressed";
-  src: url("../font/PPFormula-CondensedBlack.woff2") format("woff2"),
-    url("../font/PPFormula-CondensedBlack.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
 }
 body {
   font-family: var(--bodyFont);
