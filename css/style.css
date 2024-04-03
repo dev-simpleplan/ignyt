@@ -922,7 +922,6 @@ button {
   font-size: clamp(84px,9vw,230px);
   font-weight: 900;
   line-height: 90%;
-  letter-spacing: 0%;
   text-align: left;
   text-transform: uppercase;
 }
