@@ -547,6 +547,8 @@ button {
 .main-navbar-top-left{
   position: sticky;
   top: 85px;
+  padding: 10px;
+  margin-left: -10px;
   filter: invert(1);
   transition: .3s ease all;
 }
@@ -4390,10 +4392,10 @@ button {
   text-align: center;
   padding-top: 56px;
 }
-.career-stats .workInner-2-stat-head{
+.career-stats .workInner-2-stat-head, .career-inner-stats .workInner-2-stat-head{
   font-size: clamp(40px, 10vw, 134px);
 }
-.career-stats .workInner-2-stat-head span{
+.career-stats .workInner-2-stat-head span, .career-inner-stats .workInner-2-stat-head span{
   font-size: clamp(40px, 7vw, 96px);
 }
 .career-form .case-study-form-head{

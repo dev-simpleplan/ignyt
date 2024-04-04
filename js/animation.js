@@ -239,7 +239,7 @@ spanR.forEach((target) => {
   });
 });  
 
-document.querySelectorAll('a, button').forEach((e)=>{
+document.querySelectorAll('a, button, .navbar_main, .main-navbar-top-left, .main-navbar-top-left').forEach((e)=>{
     e.addEventListener("mouseover", ()=>{
       document.querySelector('.cursor .cursor-wrap').classList.add('active');
     })
