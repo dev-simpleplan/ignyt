@@ -3851,13 +3851,13 @@ document.querySelectorAll('.featured-works a').forEach((element)=>{
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("featured-works-tab");
+  tabcontent = document.getElementsByClassName(".featured-work-wrap.desk .featured-works-tab");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("featured-work-filter");
+  tablinks = document.getElementsByClassName(".featured-work-wrap.desk .featured-work-filter");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -3866,34 +3866,46 @@ document.querySelectorAll('.featured-works a').forEach((element)=>{
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+document.getElementById("click1").click();
+
 function openCity2(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("featured-works-tab");
+  tabcontent = document.querySelectorAll(".featured-work-wrap.mob .featured-works-tab");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("featured-work-filter");
+  tablinks = document.querySelectorAll(".featured-work-wrap.mob .featured-work-filter");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-document.getElementById("click1").click();
+document.getElementById("click2").click();
 
 let mm = gsap.matchMedia();
 mm.add("(max-width: 767px)", () => {
-    $('#click2').click();
+
     $('.featured-work-filter-txt').click((e)=>{
+        e.stopPropagation();
         $('.featured-work-filter-txt').toggleClass("active");
         $('.featured-work-filters').toggleClass("active");
     })
+    $(document).click(function(e) {
+    const container = $('.featured-work-filters');
+    // If the clicked element is not within the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.featured-work-filter-txt').removeClass("active");
+        container.removeClass("active");
+    }
+});
 });
     </script>
   </body>
