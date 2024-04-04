@@ -3851,13 +3851,13 @@ document.querySelectorAll('.featured-works a').forEach((element)=>{
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName(".featured-work-wrap.desk .featured-works-tab");
+  tabcontent = document.querySelectorAll(".featured-work-wrap.desk .featured-works-tab");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName(".featured-work-wrap.desk .featured-work-filter");
+  tablinks = document.querySelectorAll(".featured-work-wrap.desk .featured-work-filter");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
