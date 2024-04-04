@@ -4487,7 +4487,7 @@ button {
   grid-row-gap: 37px;
 }
 .main_footer ul li {
-  color: var(--ignytpurple) !;
+  color: var(--ignytpurple);
 }
 .main_footer ul li a {
   position: relative;
