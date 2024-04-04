@@ -2112,6 +2112,15 @@ button {
   outline: none;
   cursor: none;
 }
+.fQcUw-right-form-input input::-webkit-contacts-auto-fill-button,
+.fQcUw-right-form-input input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
 .fQcUw-right-form-input textarea{
   padding-top: 19px;
   padding-left: 16px;
