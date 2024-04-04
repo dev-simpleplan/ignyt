@@ -4273,6 +4273,9 @@ button {
   padding-top: 25px;
   flex-wrap: wrap;
 }
+.contact-page-left-brand-imgs .splide__slide img{
+  width: 100%;
+}
 .contact-page-left-body{
   padding-top: 30px;
   max-width: 49ch;

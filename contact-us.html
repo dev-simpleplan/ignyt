@@ -112,7 +112,7 @@
           </div>
           <div class="header_btn">
             <a href="javascript:void(0)" class="custom_btn">
-             Enquire Now
+              get started
               <div class="transition"></div>
             </a>
           </div>
@@ -285,18 +285,22 @@
                     <div class="contact-page-left-brand-head">
                         Brands that trust upon us
                     </div>
-                    <div class="contact-page-left-brand-imgs">
-                        <div class="contact-page-left-brand-img">
-                            <img src="img/contactLogo1.png" alt="">
-                        </div>
-                        <div class="contact-page-left-brand-img">
-                            <img src="img/contactLogo2.png" alt="">
-                        </div>
-                        <div class="contact-page-left-brand-img">
-                            <img src="img/contactLogo1.png" alt="">
-                        </div>
-                        <div class="contact-page-left-brand-img">
-                            <img src="img/contactLogo3.png" alt="">
+                    <div class="contact-page-left-brand-imgs splide">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="img/contactLogo1.png" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="img/contactLogo2.png" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="img/contactLogo1.png" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                  <img src="img/contactLogo3.png" alt="">
+                            </li>
+                        </ul>
                         </div>
                     </div>
                </div>
@@ -741,6 +745,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   <script>  
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.contact-page-left-brand-imgs.splide', {
+          type   : 'loop',
+          drag   : 'free',
+          gap    :   '40px',
+          focus  : 'center',
+          arrows : false,
+          autoWidth: false,
+          perPage: 5,
+          breakpoints: {
+            991: {
+              perPage: 4,
+             
+            },
+            767: {
+              perPage: 3,
+          
+            }
+          },
+          pagination : false,
+          autoScroll: {
+            speed: 1,
+            pauseOnHover: false,
+          },
+          }).mount( window.splide.Extensions );
+        });
 
     </script>
   </body>
