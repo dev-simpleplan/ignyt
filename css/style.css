@@ -1239,6 +1239,9 @@ button {
   margin: auto;
   padding: 0%;
 }
+#smooth-wrapper, #smooth-content{
+  will-change: transform;
+}
 .tmi2_box {
   display: flex;
   justify-content: center;
