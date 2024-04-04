@@ -5430,6 +5430,7 @@ button {
 .fQcUw-left-questions-float{
   margin-top: 0px;
 }
+
 }
 
 @media only screen and (max-width:767px){
@@ -6209,6 +6210,9 @@ button {
   }
   .home-banner-text .home-banner-img.video{
     width: 45vw;
+  }
+  .slider_main2{
+    column-gap: 70px;
   }
 }
 
