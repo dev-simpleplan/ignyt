@@ -245,23 +245,30 @@ button {
 }
 .cursor .cursor-wrap {
   position: absolute;
-  display: grid;
-  width: 26px;
-  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 29px;
+  height: 30px;
   border-radius: 50%;
   place-items: center;
-  transition: all .4s;
 }
-.cursor .cursor-wrap.active{
-  transform: scale(1.5);
-}
+
 .cursor .cursor-wrap img:nth-child(1){
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transform: scale(0);
+  transition: all .4s;
+}
+.cursor .cursor-wrap.active img:nth-child(1){
+  transform: scale(1);
 }
 .cursor .cursor-wrap img:nth-child(2){
   position: absolute;
+  height: 13px;
+  width: 13px;
 }
 .cursor-wrap-svg img{
   height: 100%;
@@ -2026,13 +2033,24 @@ button {
 .fQcUw-left-questions{
   padding-top: 55px;
 }
-.subService-8-wrap-bottom .fQcUw-left-questions{
+.subService-8-wrap-bottom{
+  display: flex;
+  align-items: start;
+  gap: 119px;
+}
+.subService-8-wrap-bottom{
   padding-top: 88px;
+}
+.subService-8-wrap-bottom .fQcUw-left-questions{
+  padding-top: 0px;
   width: 50%;
 }
 .subService-8-wrap-bottom .fQcUw-left-question{
   padding: 8px 0;
   position: relative;
+}
+.fQcUw-left-questions-float{
+  margin-top: 40px;
 }
 .fQcUw-left-questions .fQcUw-left-question:not(:first-child){
   margin-top: 10px;
@@ -2052,13 +2070,10 @@ button {
   color: rgb(251, 90, 13);
 }
 .fQcUw-left-question-float{
-  position: absolute;
-  right: -100%;
   border-left: 1px solid rgb(251, 90, 13);
   border-bottom: 1px solid rgb(251, 90, 13);
-  top: 40px;
-  opacity: 0;
-  transition: .2s ease all;
+  animation: tabEffect 1s;
+  display: none;
 }
 .fQcUw-left-question.active .fQcUw-left-question-float{
   opacity: 1;
@@ -2093,6 +2108,7 @@ button {
   color: rgb(255, 255, 255);
   width: 100%;
   outline: none;
+  cursor: none;
 }
 .fQcUw-right-form-input textarea{
   padding-top: 19px;
@@ -2105,6 +2121,7 @@ button {
   resize: none;
   color: rgb(255, 255, 255);
   outline: none;
+  cursor: none;
 }
 .fQcUw-right-form-input textarea::placeholder{
   color: rgb(255, 255, 255);
