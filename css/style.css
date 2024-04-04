@@ -3817,6 +3817,7 @@ button {
   max-width: 390px;
   border: none;
   border-bottom: 0.5px solid rgb(114, 88, 121);
+  cursor: none;
 }
 .case-study-form-input input::placeholder{
   color: rgb(114, 88, 121);
@@ -6225,6 +6226,10 @@ button {
 }
 .subService-8-wrap-bottom .fQcUw-left-questions{
   padding-bottom: 10px;
+}
+.featured-work {
+  padding: 70px 0;
+  padding-bottom: 30px;
 }
 }
 
