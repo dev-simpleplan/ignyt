@@ -4390,6 +4390,12 @@ button {
   text-align: center;
   padding-top: 56px;
 }
+.career-stats .workInner-2-stat-head{
+  font-size: clamp(40px, 10vw, 134px);
+}
+.career-stats .workInner-2-stat-head span{
+  font-size: clamp(40px, 7vw, 96px);
+}
 .career-form .case-study-form-head{
   max-width: 37ch;
 }
