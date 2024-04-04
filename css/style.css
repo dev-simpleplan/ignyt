@@ -5388,6 +5388,40 @@ button {
 .policy-head h2 {
   font-size:76px;
 }
+.subService-8-wrap-bottom{
+  flex-direction: column;
+}
+.fQcUw-left-question-float-wrap::after{
+  display: none;
+}
+.subService-8-wrap-bottom .fQcUw-left-questions{
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  justify-content: start;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.subService-8-wrap-bottom .fQcUw-left-question{
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.service-we-offer-list-cont-wrap{
+  align-items: start;
+}
+.fQcUw-left-questions .fQcUw-left-question:not(:first-child){
+  margin-top: 0px;
+}
+.subService-8-wrap-bottom{
+  gap: 35px;
+}
+.fQcUw-left-question-float-body{
+  max-width: 100%;
+}
+.fQcUw-left-questions-float{
+  margin-top: 0px;
+}
 }
 
 @media only screen and (max-width:767px){
@@ -6148,6 +6182,14 @@ button {
 }
 .our-team-ticker{
   padding-top: 0px;
+}
+.fQcUw-left-question-float-wrap {
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 30px;
+}
+.subService-8-wrap-bottom .fQcUw-left-questions{
+  padding-bottom: 10px;
 }
 }
 
