@@ -4564,6 +4564,7 @@ button {
 }
 .footer_top ul li {
   margin-top: 11px;
+  display: flex;
 }
 .ftml_heading p {
   color: #8d8d84;
