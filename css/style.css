@@ -1565,7 +1565,9 @@ button {
   content: "";
   position: absolute;
   top: -156px;
-  right: 43vw;
+  right: 0;
+  left: 130px;
+  margin: 0 auto;
   height: 156px;
   width: 1px;
   background-color: rgb(119, 119, 119);
