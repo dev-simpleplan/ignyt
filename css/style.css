@@ -1835,7 +1835,7 @@ button {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .wis-bottom{
   padding-top: 30px;
@@ -1945,6 +1945,9 @@ button {
 }
 .wydwd-right{
   width: 45%;
+}
+.wydwd-left-body{
+  padding-top: 15px;
 }
 .wydwd-left-body p:not(:first-child){
   padding-top: 15px;
