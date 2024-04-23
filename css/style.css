@@ -1527,6 +1527,31 @@ button {
 .our_moto_section.with-mission .mm_text_bottom p:nth-child(2){
   display: none;
 }
+.our_moto_section.without-moto-line{
+  overflow: hidden;
+}
+.our_moto_section.without-moto-line .mm_btm{
+  padding-top: 70px;
+}
+.our_moto_section.without-moto-line .mm_btm::after{
+  top: -85px;
+}
+.our_moto_section.without-moto-line .mmbtm_text_btm p span{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.12px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  border: none;
+  margin-right: 0px;
+  text-transform: none;
+}
+.our_moto_section.without-moto-line .mmbtm_text_btm .trans-forth{
+  margin-top: 20px;
+}
+.mmbtm_left-btn{
+  padding-top: 37px;
+}
 .mm_text_bottom p {
   color: #f8f5f2;
   font-family: var(--pp);
@@ -3642,6 +3667,9 @@ button {
   text-align: center;
   text-transform: uppercase;
 }
+.workInner-2-stat-head span{
+  font-size: clamp(20px,5vw,66px);
+}
 .workInner-2-stat-body{
   color: rgb(85, 85, 85);
   font-size: clamp(10px ,2vw, 16px);
@@ -5478,6 +5506,9 @@ button {
 }
 .fQcUw-left-questions-float{
   margin-top: 0px;
+}
+.mmbtm_left-btn{
+  text-align: center;
 }
 
 }
