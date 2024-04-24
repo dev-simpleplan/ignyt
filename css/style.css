@@ -2226,7 +2226,7 @@ button {
 
 /* Services Page Starts */
 .our_moto_section.with-mission .mm_text_bottom p{
-  font-size: clamp(137px,21.6vw,350.254px);
+  font-size: clamp(137px,21.5vw,350.254px);
 }
 .our_moto_section.with-mission .mm_text_top h3{
   max-width: 45ch;
