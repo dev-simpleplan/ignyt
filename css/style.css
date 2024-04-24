@@ -1863,7 +1863,7 @@ button {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .wis-bottom{
   padding-top: 30px;
