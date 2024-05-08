@@ -2183,12 +2183,26 @@ button {
 }
 .serviceTemp-5.sService .serviceTemp-5-wrap-left{
   height: auto;
+  max-height: 100%;
 }
 .subService-10-content-body{
   padding-top: 15px;
 }
 .subService-10-content-body p:not(:first-child){
   padding-top: 15px;
+}
+.serviceTemp-5-wrap-right-sub-head span{
+    font-family: var(--baseFont);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.5px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #36193E;
+    text-transform: uppercase;
+}
+.serviceTemp-5-wrap-right-sub-head{
+  padding-bottom: 10px;
 }
 .subService-10-content-body p span{
   font-weight: 700;
@@ -2342,10 +2356,17 @@ button {
 
 /* Services Page Starts */
 .our_moto_section.with-mission .mm_text_bottom p{
-  font-size: clamp(137px,21.5vw,350.254px);
+  font-size: clamp(87px,21.5vw,350.254px);
 }
 .our_moto_section.with-mission .mm_text_top h3{
   max-width: 45ch;
+}
+.subService-9.our_moto_section.with-mission .mm_text_top h3{
+  max-width: 50ch;
+}
+.subServ9-btn{
+  text-align: center;
+  padding-top: 34px;
 }
 .service-banner-image{
   height: 100vh;
@@ -4872,6 +4893,9 @@ button {
 .serviceTemp-7-img img{
   width: 100%;
 }
+
+/* Policy Starts */
+/* Policy Ends */
 @media only screen and (min-width:1500px){
   .c_inner .line1{
     width: 1px;
@@ -4886,7 +4910,7 @@ button {
 
 @media only screen and (max-width:1400px){
   .our_moto_section.with-mission .mm_text_bottom p{
-    font-size: clamp(137px,20vw,350.254px);
+    font-size: clamp(87px,20vw,350.254px);
   }
 }
 @media only screen and (max-width:1300px){
@@ -5665,6 +5689,9 @@ button {
 @media only screen and (max-width:767px){
   .spacer{
     height: 100px;
+  }
+  .subService-9 .mm_text_top{
+    position: static;
   }
   .benefits-you-get-wrap{
     flex-direction: column-reverse;
